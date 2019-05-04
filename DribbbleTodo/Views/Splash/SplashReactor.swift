@@ -5,29 +5,40 @@
 //  Created by tskim on 02/05/2019.
 //  Copyright © 2019 hucet. All rights reserved.
 //
-
-import Foundation
 import ReactorKit
 import RxSwift
 
 class SplashReactor: Reactor {
-    let initialState: State = State()
     
-    init() {
+    let initialState: State
+    let userService: UserServiceType
+    
+    init(_ userService: UserServiceType) {
+        initialState = State()
+        self.userService = userService
     }
     
-    enum Action {
-    }
     struct State {
+        var authenticated: Bool?
+    }
+    enum Action {
+        case checkIfAuthenticated
     }
     enum Mutation {
+        case setAuthenticated(Bool)
     }
     func mutate(action: Action) -> Observable<Mutation> {
-        logger.debug("mutate action: \(action)")
-        return .empty()
+        switch action {
+        case .checkIfAuthenticated:
+            return .just(.setAuthenticated(userService.isLogin()))
+        }
     }
-    func reduce(state: State, mutation: Mutation) -> State {
+    func reduce(state: State, mutation: Mutation) -> SplashReactor.State {
         var newState = state
+        switch mutation {
+        case .setAuthenticated(let authenticated):
+            newState.authenticated = authenticated
+        }
         return newState
     }
 }

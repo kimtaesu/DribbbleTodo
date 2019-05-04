@@ -8,6 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		5F9B3CA720D5836900469C8B /* Pods_DribbbleTodoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E922015D4C37290EC86C720 /* Pods_DribbbleTodoTests.framework */; };
+		BD311143227D61A800FB8217 /* TestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD311142227D61A800FB8217 /* TestError.swift */; };
+		BD311146227D652200FB8217 /* Me.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD311145227D652200FB8217 /* Me.swift */; };
+		BD311148227D669F00FB8217 /* User+Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD311147227D669F00FB8217 /* User+Map.swift */; };
+		BD31114E227D78E600FB8217 /* UIAlertA.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD31114D227D78E600FB8217 /* UIAlertA.swift */; };
+		BD311151227D799E00FB8217 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD31114F227D799E00FB8217 /* Localizable.strings */; };
+		BD311153227D7B4A00FB8217 /* UIViewController+UIAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD311152227D7B4A00FB8217 /* UIViewController+UIAlertViewController.swift */; };
+		BD311156227D820600FB8217 /* TaskEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD311155227D820600FB8217 /* TaskEditViewController.swift */; };
+		BD311158227D820F00FB8217 /* TaskEditReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD311157227D820F00FB8217 /* TaskEditReactor.swift */; };
+		BD311160227D848000FB8217 /* DateDaySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD31115F227D848000FB8217 /* DateDaySpec.swift */; };
+		BD311162227D94A100FB8217 /* DayOfWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD311161227D94A100FB8217 /* DayOfWeek.swift */; };
+		BD311164227D94AF00FB8217 /* DateDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD311163227D94AF00FB8217 /* DateDay.swift */; };
+		BD311166227D96D300FB8217 /* CalendarWeekCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD311165227D96D300FB8217 /* CalendarWeekCell.swift */; };
+		BD311168227D989D00FB8217 /* CalendarWeekReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD311167227D989D00FB8217 /* CalendarWeekReactor.swift */; };
+		BD31116A227D98E600FB8217 /* CalendarWeekReactorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD311169227D98E600FB8217 /* CalendarWeekReactorSpec.swift */; };
+		BD31116C227D99E800FB8217 /* Date+Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD31116B227D99E800FB8217 /* Date+Day.swift */; };
 		BD3C9A9D22792CF600E51A34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3C9A9C22792CF600E51A34 /* AppDelegate.swift */; };
 		BD3C9A9F22792CF600E51A34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3C9A9E22792CF600E51A34 /* ViewController.swift */; };
 		BD3C9AA222792CF600E51A34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD3C9AA022792CF600E51A34 /* Main.storyboard */; };
@@ -32,10 +47,26 @@
 		BD7840FF227B0220001E5DEE /* SplashReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7840FE227B0220001E5DEE /* SplashReactor.swift */; };
 		BD784101227B0242001E5DEE /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD784100227B0242001E5DEE /* Logger.swift */; };
 		BD784103227B02A6001E5DEE /* HasDisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD784102227B02A6001E5DEE /* HasDisposeBag.swift */; };
-		BD784107227B02E4001E5DEE /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD784106227B02E4001E5DEE /* TodoListViewController.swift */; };
+		BD784107227B02E4001E5DEE /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD784106227B02E4001E5DEE /* TaskListViewController.swift */; };
 		BD784109227B03C0001E5DEE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD784108227B03C0001E5DEE /* main.swift */; };
 		BD78410B227B04CB001E5DEE /* StubAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD78410A227B04CB001E5DEE /* StubAppDelegate.swift */; };
 		BD78410D227B04F2001E5DEE /* TestConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD78410C227B04F2001E5DEE /* TestConfiguration.swift */; };
+		BDE1BDA4227D3C5900BE2419 /* LoginReactorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE1BDA3227D3C5900BE2419 /* LoginReactorSpec.swift */; };
+		BDE1BDA9227D457300BE2419 /* FirebaseAuth+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE1BDA8227D457300BE2419 /* FirebaseAuth+Rx.swift */; };
+		BDE1BDAB227D48DA00BE2419 /* LoginViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE1BDAA227D48DA00BE2419 /* LoginViewControllerSpec.swift */; };
+		BDE1BDBA227D509400BE2419 /* GoogleService-Info-Test.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDE1BDB8227D509300BE2419 /* GoogleService-Info-Test.plist */; };
+		BDE1BDBB227D509400BE2419 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDE1BDB9227D509300BE2419 /* GoogleService-Info.plist */; };
+		BDE9CC11227B295800191DB9 /* TaskListReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE9CC10227B295800191DB9 /* TaskListReactor.swift */; };
+		BDE9CC13227B29C300191DB9 /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE9CC12227B29C300191DB9 /* UIViewController+Rx.swift */; };
+		BDE9CC16227B2B6800191DB9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE9CC15227B2B6800191DB9 /* LoginViewController.swift */; };
+		BDE9CC1A227B2BA900191DB9 /* SplashReactorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE9CC19227B2BA900191DB9 /* SplashReactorSpec.swift */; };
+		BDE9CC1D227B2C9400191DB9 /* UserServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE9CC1C227B2C9400191DB9 /* UserServiceType.swift */; };
+		BDE9CC1F227B2CF200191DB9 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE9CC1E227B2CF200191DB9 /* UserService.swift */; };
+		BDE9CC22227B2EC400191DB9 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE9CC21227B2EC400191DB9 /* GeneratedMocks.swift */; };
+		BDE9CC25227B2F9400191DB9 /* Cuckoo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDE9CC24227B2F9400191DB9 /* Cuckoo.framework */; };
+		BDE9CC27227B32BD00191DB9 /* SplashViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE9CC26227B32BD00191DB9 /* SplashViewControllerSpec.swift */; };
+		BDE9CC2A227B352100191DB9 /* StubUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE9CC29227B352100191DB9 /* StubUserService.swift */; };
+		BDE9CC2C227B37A200191DB9 /* LoginReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE9CC2B227B37A200191DB9 /* LoginReactor.swift */; };
 		F84A1ADF1629B97D461148F7 /* Pods_DribbbleTodo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 298B3403540F96143F191543 /* Pods_DribbbleTodo.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +89,21 @@
 		4C9AA46AAF51E6D15E901E73 /* Pods-DribbbleTodoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DribbbleTodoTests.debug.xcconfig"; path = "Target Support Files/Pods-DribbbleTodoTests/Pods-DribbbleTodoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4EB8D2B8CD419E46D0EBD8CC /* Pods-DribbbleTodoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DribbbleTodoUITests.release.xcconfig"; path = "Target Support Files/Pods-DribbbleTodoUITests/Pods-DribbbleTodoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B739655DA1A87115E1CE4D96 /* Pods-DribbbleTodo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DribbbleTodo.release.xcconfig"; path = "Target Support Files/Pods-DribbbleTodo/Pods-DribbbleTodo.release.xcconfig"; sourceTree = "<group>"; };
+		BD311142227D61A800FB8217 /* TestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestError.swift; sourceTree = "<group>"; };
+		BD311145227D652200FB8217 /* Me.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Me.swift; sourceTree = "<group>"; };
+		BD311147227D669F00FB8217 /* User+Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Map.swift"; sourceTree = "<group>"; };
+		BD31114D227D78E600FB8217 /* UIAlertA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertA.swift; sourceTree = "<group>"; };
+		BD311150227D799E00FB8217 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BD311152227D7B4A00FB8217 /* UIViewController+UIAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIAlertViewController.swift"; sourceTree = "<group>"; };
+		BD311155227D820600FB8217 /* TaskEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditViewController.swift; sourceTree = "<group>"; };
+		BD311157227D820F00FB8217 /* TaskEditReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditReactor.swift; sourceTree = "<group>"; };
+		BD31115F227D848000FB8217 /* DateDaySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDaySpec.swift; sourceTree = "<group>"; };
+		BD311161227D94A100FB8217 /* DayOfWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayOfWeek.swift; sourceTree = "<group>"; };
+		BD311163227D94AF00FB8217 /* DateDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDay.swift; sourceTree = "<group>"; };
+		BD311165227D96D300FB8217 /* CalendarWeekCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarWeekCell.swift; sourceTree = "<group>"; };
+		BD311167227D989D00FB8217 /* CalendarWeekReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarWeekReactor.swift; sourceTree = "<group>"; };
+		BD311169227D98E600FB8217 /* CalendarWeekReactorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarWeekReactorSpec.swift; sourceTree = "<group>"; };
+		BD31116B227D99E800FB8217 /* Date+Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Day.swift"; sourceTree = "<group>"; };
 		BD3C9A9922792CF600E51A34 /* DribbbleTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DribbbleTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD3C9A9C22792CF600E51A34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD3C9A9E22792CF600E51A34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,10 +132,26 @@
 		BD7840FE227B0220001E5DEE /* SplashReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashReactor.swift; sourceTree = "<group>"; };
 		BD784100227B0242001E5DEE /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		BD784102227B02A6001E5DEE /* HasDisposeBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasDisposeBag.swift; sourceTree = "<group>"; };
-		BD784106227B02E4001E5DEE /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
+		BD784106227B02E4001E5DEE /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
 		BD784108227B03C0001E5DEE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		BD78410A227B04CB001E5DEE /* StubAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubAppDelegate.swift; sourceTree = "<group>"; };
 		BD78410C227B04F2001E5DEE /* TestConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConfiguration.swift; sourceTree = "<group>"; };
+		BDE1BDA3227D3C5900BE2419 /* LoginReactorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginReactorSpec.swift; sourceTree = "<group>"; };
+		BDE1BDA8227D457300BE2419 /* FirebaseAuth+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FirebaseAuth+Rx.swift"; sourceTree = "<group>"; };
+		BDE1BDAA227D48DA00BE2419 /* LoginViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerSpec.swift; sourceTree = "<group>"; };
+		BDE1BDB8227D509300BE2419 /* GoogleService-Info-Test.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Test.plist"; sourceTree = "<group>"; };
+		BDE1BDB9227D509300BE2419 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BDE9CC10227B295800191DB9 /* TaskListReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListReactor.swift; sourceTree = "<group>"; };
+		BDE9CC12227B29C300191DB9 /* UIViewController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
+		BDE9CC15227B2B6800191DB9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BDE9CC19227B2BA900191DB9 /* SplashReactorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashReactorSpec.swift; sourceTree = "<group>"; };
+		BDE9CC1C227B2C9400191DB9 /* UserServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceType.swift; sourceTree = "<group>"; };
+		BDE9CC1E227B2CF200191DB9 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		BDE9CC21227B2EC400191DB9 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
+		BDE9CC24227B2F9400191DB9 /* Cuckoo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cuckoo.framework; path = Carthage/Build/iOS/Cuckoo.framework; sourceTree = "<group>"; };
+		BDE9CC26227B32BD00191DB9 /* SplashViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewControllerSpec.swift; sourceTree = "<group>"; };
+		BDE9CC29227B352100191DB9 /* StubUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubUserService.swift; sourceTree = "<group>"; };
+		BDE9CC2B227B37A200191DB9 /* LoginReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginReactor.swift; sourceTree = "<group>"; };
 		C129BF59E2E624E8CFB396EB /* Pods_DribbbleTodoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DribbbleTodoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -109,6 +171,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDE9CC25227B2F9400191DB9 /* Cuckoo.framework in Frameworks */,
 				5F9B3CA720D5836900469C8B /* Pods_DribbbleTodoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -132,6 +195,7 @@
 		8293093A5A994822B4C15788 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BDE9CC24227B2F9400191DB9 /* Cuckoo.framework */,
 				BD7840F5227B01C6001E5DEE /* SnapKit.framework */,
 				BD7840F6227B01C6001E5DEE /* SwiftyBeaver.framework */,
 				BD7840F7227B01C6001E5DEE /* Swinject.framework */,
@@ -142,9 +206,48 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BD311144227D651200FB8217 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BD311145227D652200FB8217 /* Me.swift */,
+				BD311147227D669F00FB8217 /* User+Map.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BD311154227D81E700FB8217 /* TaskEdit */ = {
+			isa = PBXGroup;
+			children = (
+				BD311155227D820600FB8217 /* TaskEditViewController.swift */,
+				BD311157227D820F00FB8217 /* TaskEditReactor.swift */,
+			);
+			path = TaskEdit;
+			sourceTree = "<group>";
+		};
+		BD311159227D826100FB8217 /* CalendarWeek */ = {
+			isa = PBXGroup;
+			children = (
+				BD311165227D96D300FB8217 /* CalendarWeekCell.swift */,
+				BD311161227D94A100FB8217 /* DayOfWeek.swift */,
+				BD311163227D94AF00FB8217 /* DateDay.swift */,
+				BD311167227D989D00FB8217 /* CalendarWeekReactor.swift */,
+			);
+			path = CalendarWeek;
+			sourceTree = "<group>";
+		};
+		BD31115E227D847A00FB8217 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				BD31115F227D848000FB8217 /* DateDaySpec.swift */,
+				BD311169227D98E600FB8217 /* CalendarWeekReactorSpec.swift */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
 		BD3C9A9022792CF600E51A34 = {
 			isa = PBXGroup;
 			children = (
+				BDE1BDBC227D509600BE2419 /* GoogleServices */,
 				BD3C9AEB22792EB500E51A34 /* swiftgen.yml */,
 				BD3C9ADA22792DD200E51A34 /* Generated */,
 				BD3C9AD722792DD200E51A34 /* Resources */,
@@ -170,14 +273,17 @@
 		BD3C9A9B22792CF600E51A34 /* DribbbleTodo */ = {
 			isa = PBXGroup;
 			children = (
+				BD311144227D651200FB8217 /* Models */,
+				BDE1BDA7227D456D00BE2419 /* Rx */,
+				BD90079A227BF55400DC7F91 /* SupportingFiles */,
+				BDE9CC1B227B2C8600191DB9 /* Service */,
 				BD7840FB227B01ED001E5DEE /* Views */,
 				BD3C9A9C22792CF600E51A34 /* AppDelegate.swift */,
 				BD3C9A9E22792CF600E51A34 /* ViewController.swift */,
-				BD3C9AA022792CF600E51A34 /* Main.storyboard */,
 				BD3C9AA622792CF700E51A34 /* Assets.xcassets */,
 				BD3C9AA822792CF700E51A34 /* LaunchScreen.storyboard */,
-				BD3C9AAB22792CF700E51A34 /* Info.plist */,
 				BD3C9AA322792CF600E51A34 /* DribbbleTodo.xcdatamodeld */,
+				BD31114F227D799E00FB8217 /* Localizable.strings */,
 				BD7840F3227B01A4001E5DEE /* CompositionRoot.swift */,
 				BD784100227B0242001E5DEE /* Logger.swift */,
 				BD784102227B02A6001E5DEE /* HasDisposeBag.swift */,
@@ -189,10 +295,13 @@
 		BD3C9AB322792CF800E51A34 /* DribbbleTodoTests */ = {
 			isa = PBXGroup;
 			children = (
+				BDE9CC28227B351200191DB9 /* Stub */,
+				BDE9CC21227B2EC400191DB9 /* GeneratedMocks.swift */,
+				BDE9CC17227B2B9400191DB9 /* Views */,
 				BD3C9AB422792CF800E51A34 /* DribbbleTodoTests.swift */,
 				BD3C9AB622792CF800E51A34 /* Info.plist */,
-				BD78410A227B04CB001E5DEE /* StubAppDelegate.swift */,
 				BD78410C227B04F2001E5DEE /* TestConfiguration.swift */,
+				BD311142227D61A800FB8217 /* TestError.swift */,
 			);
 			path = DribbbleTodoTests;
 			sourceTree = "<group>";
@@ -244,8 +353,13 @@
 		BD7840FB227B01ED001E5DEE /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BD784105227B02D3001E5DEE /* TodoList */,
+				BD311159227D826100FB8217 /* CalendarWeek */,
+				BD311154227D81E700FB8217 /* TaskEdit */,
+				BDE9CC14227B2B6100191DB9 /* Login */,
+				BD784105227B02D3001E5DEE /* TaskList */,
 				BD784104227B02CB001E5DEE /* Splash */,
+				BDE9CC12227B29C300191DB9 /* UIViewController+Rx.swift */,
+				BD31114D227D78E600FB8217 /* UIAlertA.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -259,12 +373,96 @@
 			path = Splash;
 			sourceTree = "<group>";
 		};
-		BD784105227B02D3001E5DEE /* TodoList */ = {
+		BD784105227B02D3001E5DEE /* TaskList */ = {
 			isa = PBXGroup;
 			children = (
-				BD784106227B02E4001E5DEE /* TodoListViewController.swift */,
+				BD784106227B02E4001E5DEE /* TaskListViewController.swift */,
+				BDE9CC10227B295800191DB9 /* TaskListReactor.swift */,
 			);
-			path = TodoList;
+			path = TaskList;
+			sourceTree = "<group>";
+		};
+		BD90079A227BF55400DC7F91 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				BD3C9AA022792CF600E51A34 /* Main.storyboard */,
+				BD3C9AAB22792CF700E51A34 /* Info.plist */,
+			);
+			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		BDE1BDA2227D3C5100BE2419 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				BDE1BDA3227D3C5900BE2419 /* LoginReactorSpec.swift */,
+				BDE1BDAA227D48DA00BE2419 /* LoginViewControllerSpec.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		BDE1BDA7227D456D00BE2419 /* Rx */ = {
+			isa = PBXGroup;
+			children = (
+				BDE1BDA8227D457300BE2419 /* FirebaseAuth+Rx.swift */,
+				BD311152227D7B4A00FB8217 /* UIViewController+UIAlertViewController.swift */,
+			);
+			path = Rx;
+			sourceTree = "<group>";
+		};
+		BDE1BDBC227D509600BE2419 /* GoogleServices */ = {
+			isa = PBXGroup;
+			children = (
+				BDE1BDB8227D509300BE2419 /* GoogleService-Info-Test.plist */,
+				BDE1BDB9227D509300BE2419 /* GoogleService-Info.plist */,
+			);
+			name = GoogleServices;
+			sourceTree = "<group>";
+		};
+		BDE9CC14227B2B6100191DB9 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				BDE9CC15227B2B6800191DB9 /* LoginViewController.swift */,
+				BDE9CC2B227B37A200191DB9 /* LoginReactor.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		BDE9CC17227B2B9400191DB9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BD31115E227D847A00FB8217 /* Date */,
+				BDE1BDA2227D3C5100BE2419 /* Login */,
+				BDE9CC18227B2B9C00191DB9 /* Splash */,
+				BD31116B227D99E800FB8217 /* Date+Day.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BDE9CC18227B2B9C00191DB9 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				BDE9CC19227B2BA900191DB9 /* SplashReactorSpec.swift */,
+				BDE9CC26227B32BD00191DB9 /* SplashViewControllerSpec.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		BDE9CC1B227B2C8600191DB9 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				BDE9CC1C227B2C9400191DB9 /* UserServiceType.swift */,
+				BDE9CC1E227B2CF200191DB9 /* UserService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		BDE9CC28227B351200191DB9 /* Stub */ = {
+			isa = PBXGroup;
+			children = (
+				BD78410A227B04CB001E5DEE /* StubAppDelegate.swift */,
+				BDE9CC29227B352100191DB9 /* StubUserService.swift */,
+			);
+			path = Stub;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,15 +473,17 @@
 			buildConfigurationList = BD3C9AC422792CF800E51A34 /* Build configuration list for PBXNativeTarget "DribbbleTodo" */;
 			buildPhases = (
 				EAC7835BE3B142E95C81A82B /* [CP] Check Pods Manifest.lock */,
-				BD3C9A9522792CF600E51A34 /* Sources */,
 				BD3C9AE622792DE000E51A34 /* SwiftGen */,
 				BD3C9AE722792DF200E51A34 /* SwiftLint */,
 				BD3C9AE822792E0000E51A34 /* Mark */,
+				BD3C9A9522792CF600E51A34 /* Sources */,
 				BD3C9A9622792CF600E51A34 /* Frameworks */,
 				BD3C9A9722792CF600E51A34 /* Resources */,
 				BD3C9AE922792E0D00E51A34 /* [CP] Copy Carthage Resources */,
 				D15EF3A38D343026F2CB159C /* [CP] Embed Pods Frameworks */,
 				BD3C9AEA22792E2C00E51A34 /* Fabric */,
+				BDE9CC20227B2E7700191DB9 /* Cuckoo */,
+				93DC3110B463D43E1990AD86 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -303,6 +503,7 @@
 				BD3C9AAD22792CF800E51A34 /* Frameworks */,
 				BD3C9AAE22792CF800E51A34 /* Resources */,
 				7BDFD3AE8B099F91F499CFCA /* [CP] Embed Pods Frameworks */,
+				BDE9CC23227B2F3A00191DB9 /* [CP] Copy Carthage Resources */,
 			);
 			buildRules = (
 			);
@@ -359,7 +560,10 @@
 			files = (
 				BD3C9AD022792DB900E51A34 /* Cartfile in Resources */,
 				BD3C9AEC22792EB500E51A34 /* swiftgen.yml in Resources */,
+				BDE1BDBB227D509400BE2419 /* GoogleService-Info.plist in Resources */,
 				BD3C9AD522792DCA00E51A34 /* Enviroment.plist in Resources */,
+				BDE1BDBA227D509400BE2419 /* GoogleService-Info-Test.plist in Resources */,
+				BD311151227D799E00FB8217 /* Localizable.strings in Resources */,
 				BD3C9AAA22792CF700E51A34 /* LaunchScreen.storyboard in Resources */,
 				BD3C9AA722792CF700E51A34 /* Assets.xcassets in Resources */,
 				BD3C9AE022792DD200E51A34 /* color.txt in Resources */,
@@ -411,6 +615,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DribbbleTodoTests/Pods-DribbbleTodoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93DC3110B463D43E1990AD86 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DribbbleTodo/Pods-DribbbleTodo-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DribbbleTodo/Pods-DribbbleTodo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BD3C9AE622792DE000E51A34 /* SwiftGen */ = {
@@ -507,6 +733,43 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" 01a8a326ef40f1e4010685ff3fe389ad91c04149 4f7b6feb7d1e7498160d8920b040828ccb45071a71a170c4006a4075e69fd0c8\n";
 		};
+		BDE9CC20227B2E7700191DB9 /* Cuckoo */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Cuckoo;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "OUTPUT_FILE=\"$PROJECT_DIR/${TARGET_NAME}Tests/GeneratedMocks.swift\"\n\necho \"Generated Mocks File = $OUTPUT_FILE\"\n\nINPUT_DIR=\"${PROJECT_DIR}/${TARGET_NAME}\"\n\nfile=\"Carthage/Checkouts/Cuckoo/cuckoo_generator\"\nif [ -f $file ] \nthen\necho \"$file found.\"\nelse\necho \"$file not found.\"\nwget \"https://github.com/Brightify/Cuckoo/releases/download/0.12.1/cuckoo_generator\" -P \"Carthage/Checkouts/Cuckoo\"\nchmod 755 $file\nfi\n\n\"Carthage/Checkouts/Cuckoo/run\" generate --testable \"$PROJECT_NAME\" \\\n--output \"$OUTPUT_FILE\" \\\n\"$INPUT_DIR/Service/UserServiceType.swift\" \\\n";
+		};
+		BDE9CC23227B2F3A00191DB9 /* [CP] Copy Carthage Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Cuckoo.framework",
+			);
+			name = "[CP] Copy Carthage Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
 		D15EF3A38D343026F2CB159C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -516,21 +779,33 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-DribbbleTodo/Pods-DribbbleTodo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactorKit/ReactorKit.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactorKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -588,6 +863,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD311156227D820600FB8217 /* TaskEditViewController.swift in Sources */,
+				BDE9CC16227B2B6800191DB9 /* LoginViewController.swift in Sources */,
+				BD31114E227D78E600FB8217 /* UIAlertA.swift in Sources */,
 				BD784109227B03C0001E5DEE /* main.swift in Sources */,
 				BD3C9AE422792DD200E51A34 /* Fonts.swift in Sources */,
 				BD3C9AA522792CF600E51A34 /* DribbbleTodo.xcdatamodeld in Sources */,
@@ -595,14 +873,28 @@
 				BD3C9AE522792DD200E51A34 /* Plist.swift in Sources */,
 				BD3C9AE222792DD200E51A34 /* L10n.swift in Sources */,
 				BD3C9AE322792DD200E51A34 /* MyColor.swift in Sources */,
+				BD311168227D989D00FB8217 /* CalendarWeekReactor.swift in Sources */,
+				BDE9CC2C227B37A200191DB9 /* LoginReactor.swift in Sources */,
 				BD7840FF227B0220001E5DEE /* SplashReactor.swift in Sources */,
 				BD3C9A9F22792CF600E51A34 /* ViewController.swift in Sources */,
-				BD784107227B02E4001E5DEE /* TodoListViewController.swift in Sources */,
+				BDE1BDA9227D457300BE2419 /* FirebaseAuth+Rx.swift in Sources */,
+				BDE9CC13227B29C300191DB9 /* UIViewController+Rx.swift in Sources */,
+				BD784107227B02E4001E5DEE /* TaskListViewController.swift in Sources */,
+				BD311166227D96D300FB8217 /* CalendarWeekCell.swift in Sources */,
 				BD784101227B0242001E5DEE /* Logger.swift in Sources */,
+				BD311158227D820F00FB8217 /* TaskEditReactor.swift in Sources */,
+				BDE9CC1D227B2C9400191DB9 /* UserServiceType.swift in Sources */,
 				BD3C9AE122792DD200E51A34 /* Assets.swift in Sources */,
+				BD311162227D94A100FB8217 /* DayOfWeek.swift in Sources */,
+				BD311153227D7B4A00FB8217 /* UIViewController+UIAlertViewController.swift in Sources */,
+				BD311148227D669F00FB8217 /* User+Map.swift in Sources */,
 				BD7840F4227B01A4001E5DEE /* CompositionRoot.swift in Sources */,
+				BDE9CC1F227B2CF200191DB9 /* UserService.swift in Sources */,
+				BD311164227D94AF00FB8217 /* DateDay.swift in Sources */,
 				BD3C9A9D22792CF600E51A34 /* AppDelegate.swift in Sources */,
+				BD311146227D652200FB8217 /* Me.swift in Sources */,
 				BD7840FD227B01F5001E5DEE /* SplashViewController.swift in Sources */,
+				BDE9CC11227B295800191DB9 /* TaskListReactor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,9 +902,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDE9CC1A227B2BA900191DB9 /* SplashReactorSpec.swift in Sources */,
 				BD78410B227B04CB001E5DEE /* StubAppDelegate.swift in Sources */,
+				BDE9CC27227B32BD00191DB9 /* SplashViewControllerSpec.swift in Sources */,
+				BD311143227D61A800FB8217 /* TestError.swift in Sources */,
 				BD78410D227B04F2001E5DEE /* TestConfiguration.swift in Sources */,
+				BD31116A227D98E600FB8217 /* CalendarWeekReactorSpec.swift in Sources */,
+				BDE1BDAB227D48DA00BE2419 /* LoginViewControllerSpec.swift in Sources */,
+				BDE9CC2A227B352100191DB9 /* StubUserService.swift in Sources */,
+				BD311160227D848000FB8217 /* DateDaySpec.swift in Sources */,
 				BD3C9AB522792CF800E51A34 /* DribbbleTodoTests.swift in Sources */,
+				BDE1BDA4227D3C5900BE2419 /* LoginReactorSpec.swift in Sources */,
+				BDE9CC22227B2EC400191DB9 /* GeneratedMocks.swift in Sources */,
+				BD31116C227D99E800FB8217 /* Date+Day.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,6 +929,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		BD31114F227D799E00FB8217 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD311150227D799E00FB8217 /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		BD3C9AA022792CF600E51A34 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -816,6 +1126,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 576T8HK6X4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DribbbleTodoTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -839,6 +1153,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 576T8HK6X4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DribbbleTodoTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (

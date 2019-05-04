@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict/>
+<dict>
+	<key>GoogleSignInClientId</key>
+	<string>574512048486-ui0b2qs2tcjnf8fo5p83iiv23mc5psff.apps.googleusercontent.com</string>
+</dict>
 </plist>

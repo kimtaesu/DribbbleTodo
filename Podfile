@@ -14,6 +14,10 @@ target 'DribbbleTodo' do
   pod 'RxCocoa',    '~> 4.0'
   pod 'ReactorKit'
   pod 'RxOptional'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'RxDataSources', '~> 3.0'
+  pod 'GoogleSignIn'
   # Pods for DribbbleTodo
 
   target 'DribbbleTodoTests' do
