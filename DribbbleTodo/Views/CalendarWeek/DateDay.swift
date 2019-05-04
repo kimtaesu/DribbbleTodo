@@ -10,15 +10,15 @@ import Foundation
 
 class DateDay {
     let calendar: Calendar
-    
+
     init() {
         calendar = Calendar.current
     }
-    
-    func weekdays(_ date: Date) -> [Date]{
+
+    func weekdays(_ date: Date) -> [Date] {
         let today = calendar.startOfDay(for: date)
         let dayOfWeek = calendar.component(.weekday, from: today)
-        
+
         let weekdays = calendar.range(of: .weekday, in: .weekOfYear, for: today)!
         let days = (weekdays.lowerBound ..< weekdays.upperBound)
             .compactMap {
@@ -26,7 +26,7 @@ class DateDay {
         }
         return days
     }
-    
+
     func dayOfTheWeekNames(dates: [Date]) -> [String] {
         let names = dates.map {
             DayOfWeek(rawValue: calendar.component(.weekday, from: $0))?.description ?? "unknwon"

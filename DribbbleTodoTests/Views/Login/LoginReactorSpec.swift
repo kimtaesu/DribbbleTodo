@@ -13,6 +13,7 @@ import Nimble
 import GoogleSignIn
 import FirebaseAuth
 import Quick
+import Cuckoo
 @testable import DribbbleTodo
 
 class LoginReactorSpec: QuickSpec {

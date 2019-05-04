@@ -13,6 +13,4 @@ class UserService: UserServiceType {
     func isLogin() -> Bool {
         return Auth.auth().currentUser != nil
     }
-    
-    
 }

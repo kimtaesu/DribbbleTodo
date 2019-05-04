@@ -16,25 +16,23 @@ enum DayOfWeek: Int, CaseIterable {
     case wednesday = 5
     case friday = 6
     case saturday = 7
-    
-    var description : String {
-        get {
-            switch self {
-            case .sunday:
-                return "Sun"
-            case .monday:
-                return "Mon"
-            case .thursday:
-                return "Thurs"
-            case .wednesday:
-                return "Wednes"
-            case .tuesday:
-                return "Tues"
-            case .friday:
-                return "Fri"
-            case .saturday:
-                return "Satur"
-            }
+
+    var description: String {
+        switch self {
+        case .sunday:
+            return "Sun"
+        case .monday:
+            return "Mon"
+        case .thursday:
+            return "Thurs"
+        case .wednesday:
+            return "Wednes"
+        case .tuesday:
+            return "Tues"
+        case .friday:
+            return "Fri"
+        case .saturday:
+            return "Satur"
         }
     }
 }

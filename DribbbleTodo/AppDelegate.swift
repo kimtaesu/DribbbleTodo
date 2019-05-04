@@ -6,8 +6,8 @@
 //  Copyright © 2019 hucet. All rights reserved.
 //
 
-import UIKit
 import GoogleSignIn
+import UIKit
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

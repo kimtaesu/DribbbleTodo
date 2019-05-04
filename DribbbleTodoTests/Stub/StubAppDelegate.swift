@@ -7,6 +7,8 @@
 //
 import UIKit
 import FirebaseCore
+import RxBlocking
+
 final class StubAppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(

@@ -12,22 +12,41 @@ import RxSwift
 
 class TaskListReactor: Reactor {
     let initialState: State = State()
-    
-    init() {
+    let taskService: TaskServiceType
+
+    init(_ taskService: TaskServiceType) {
+        self.taskService = taskService
     }
-    
+
     enum Action {
+        case fetchTasks
     }
     struct State {
+        var items: [TaskSection] = []
+        var refreshing: Bool = false
     }
     enum Mutation {
+        case setRefreshing(Bool)
+        case setRefresh([Task])
     }
     func mutate(action: Action) -> Observable<Mutation> {
-        logger.debug("mutate action: \(action)")
-        return .empty()
+        switch action {
+        case .fetchTasks:
+            return Observable.concat([
+                Observable.just(.setRefreshing(true)),
+                self.taskService.fetchTasks().map { Mutation.setRefresh($0) },
+                Observable.just(.setRefreshing(false))
+                ])
+        }
     }
     func reduce(state: State, mutation: Mutation) -> State {
         var newState = state
+        switch mutation {
+        case .setRefresh(let tasks):
+            newState.items = [TaskSection(header: "tasks", items: tasks.map { $0.viewModel })]
+        case .setRefreshing(let loading):
+            newState.refreshing = loading
+        }
         return newState
     }
 }

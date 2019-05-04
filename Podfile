@@ -16,6 +16,7 @@ target 'DribbbleTodo' do
   pod 'RxOptional'
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
   pod 'RxDataSources', '~> 3.0'
   pod 'GoogleSignIn'
   # Pods for DribbbleTodo

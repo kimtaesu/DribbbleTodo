@@ -10,6 +10,7 @@ import Fabric
 import Firebase
 import FirebaseCore
 import GoogleSignIn
+import RealmSwift
 import RxCocoa
 import RxOptional
 import SnapKit
@@ -31,8 +32,11 @@ final class CompositionRoot {
         let window = UIWindow()
         window.backgroundColor = .white
         window.makeKeyAndVisible()
-
-        let presentMainScreen = { window.rootViewController = TaskListViewController() }
+        
+        // swiftlint:disable force_try
+        let realm = try! Realm()
+        let taskServcie = TaskService(realm)
+        let presentMainScreen = { window.rootViewController = TaskListViewController(reactor: TaskListReactor(taskServcie)) }
         
         let userService = UserService()
         let splashDependecy = SplashViewController.Dependency(
