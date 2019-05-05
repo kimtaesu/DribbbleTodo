@@ -13,7 +13,8 @@ import UIKit
 class TaskViewCell: UICollectionViewCell, SwiftNameIdentifier {
     
     struct Metric {
-        static let checkBoxWidth = 30
+        static let height: CGFloat = 100
+        static let checkBoxWidth: CGFloat = 30
     }
     
     let checkBox = CheckBox()
@@ -21,6 +22,7 @@ class TaskViewCell: UICollectionViewCell, SwiftNameIdentifier {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        contentView.backgroundColor = UIColor.blue
         checkBox.do {
             contentView.addSubview($0)
             $0.snp.makeConstraints {
@@ -43,6 +45,9 @@ class TaskViewCell: UICollectionViewCell, SwiftNameIdentifier {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
+        return layoutAttributes
     }
 }
 

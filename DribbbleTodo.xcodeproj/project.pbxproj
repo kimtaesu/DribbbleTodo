@@ -39,6 +39,9 @@
 		BD31119F227DEA8700FB8217 /* TaskServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD31119E227DEA8700FB8217 /* TaskServiceSpec.swift */; };
 		BD3111A2227DEB4200FB8217 /* Task+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3111A1227DEB4200FB8217 /* Task+Random.swift */; };
 		BD3111A4227DEBF300FB8217 /* RandomText.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3111A3227DEBF300FB8217 /* RandomText.swift */; };
+		BD3111A6227DF1D900FB8217 /* TaskListReactorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3111A5227DF1D900FB8217 /* TaskListReactorSpec.swift */; };
+		BD3111A8227DF23F00FB8217 /* MockTaskServiceType+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3111A7227DF23F00FB8217 /* MockTaskServiceType+Mock.swift */; };
+		BD3111AA227E72E200FB8217 /* UICollectionView+Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3111A9227E72E200FB8217 /* UICollectionView+Cell.swift */; };
 		BD3C9A9D22792CF600E51A34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3C9A9C22792CF600E51A34 /* AppDelegate.swift */; };
 		BD3C9A9F22792CF600E51A34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3C9A9E22792CF600E51A34 /* ViewController.swift */; };
 		BD3C9AA222792CF600E51A34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD3C9AA022792CF600E51A34 /* Main.storyboard */; };
@@ -137,6 +140,9 @@
 		BD31119E227DEA8700FB8217 /* TaskServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskServiceSpec.swift; sourceTree = "<group>"; };
 		BD3111A1227DEB4200FB8217 /* Task+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+Random.swift"; sourceTree = "<group>"; };
 		BD3111A3227DEBF300FB8217 /* RandomText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomText.swift; sourceTree = "<group>"; };
+		BD3111A5227DF1D900FB8217 /* TaskListReactorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListReactorSpec.swift; sourceTree = "<group>"; };
+		BD3111A7227DF23F00FB8217 /* MockTaskServiceType+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MockTaskServiceType+Mock.swift"; sourceTree = "<group>"; };
+		BD3111A9227E72E200FB8217 /* UICollectionView+Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Cell.swift"; sourceTree = "<group>"; };
 		BD3C9A9922792CF600E51A34 /* DribbbleTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DribbbleTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD3C9A9C22792CF600E51A34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD3C9A9E22792CF600E51A34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -284,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				BD311186227DD61A00FB8217 /* TaskListViewControllerSpec.swift */,
+				BD3111A5227DF1D900FB8217 /* TaskListReactorSpec.swift */,
 			);
 			path = TaskList;
 			sourceTree = "<group>";
@@ -357,6 +364,7 @@
 				BD78410C227B04F2001E5DEE /* TestConfiguration.swift */,
 				BD311183227DD4C200FB8217 /* RealmConfiguration.swift */,
 				BD311142227D61A800FB8217 /* TestError.swift */,
+				BD3111A9227E72E200FB8217 /* UICollectionView+Cell.swift */,
 			);
 			path = DribbbleTodoTests;
 			sourceTree = "<group>";
@@ -526,6 +534,7 @@
 				BDE9CC29227B352100191DB9 /* StubUserService.swift */,
 				BD3111A1227DEB4200FB8217 /* Task+Random.swift */,
 				BD3111A3227DEBF300FB8217 /* RandomText.swift */,
+				BD3111A7227DF23F00FB8217 /* MockTaskServiceType+Mock.swift */,
 			);
 			path = Stub;
 			sourceTree = "<group>";
@@ -980,6 +989,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD3111AA227E72E200FB8217 /* UICollectionView+Cell.swift in Sources */,
 				BDE9CC1A227B2BA900191DB9 /* SplashReactorSpec.swift in Sources */,
 				BD78410B227B04CB001E5DEE /* StubAppDelegate.swift in Sources */,
 				BDE9CC27227B32BD00191DB9 /* SplashViewControllerSpec.swift in Sources */,
@@ -993,7 +1003,9 @@
 				BD311160227D848000FB8217 /* DateDaySpec.swift in Sources */,
 				BD3C9AB522792CF800E51A34 /* DribbbleTodoTests.swift in Sources */,
 				BD311182227DD29300FB8217 /* TaskViewCellSpec.swift in Sources */,
+				BD3111A8227DF23F00FB8217 /* MockTaskServiceType+Mock.swift in Sources */,
 				BD3111A2227DEB4200FB8217 /* Task+Random.swift in Sources */,
+				BD3111A6227DF1D900FB8217 /* TaskListReactorSpec.swift in Sources */,
 				BD3111A4227DEBF300FB8217 /* RandomText.swift in Sources */,
 				BDE1BDA4227D3C5900BE2419 /* LoginReactorSpec.swift in Sources */,
 				BD31119F227DEA8700FB8217 /* TaskServiceSpec.swift in Sources */,

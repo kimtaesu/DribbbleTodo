@@ -43,7 +43,7 @@ class TaskListReactor: Reactor {
         var newState = state
         switch mutation {
         case .setRefresh(let tasks):
-            newState.items = [TaskSection(header: "tasks", items: tasks.map { $0.viewModel })]
+            newState.items = [TaskSection(items: tasks.map { $0.viewModel })]
         case .setRefreshing(let loading):
             newState.refreshing = loading
         }

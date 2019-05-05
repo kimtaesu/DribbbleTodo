@@ -12,24 +12,26 @@ import UIKit
 @testable import DribbbleTodo
 class TaskListViewControllerSpec: QuickSpec {
     override func spec() {
-        super.spec()
         var viewController: TaskListViewController!
         var reactor: TaskListReactor!
+        var taskService: MockTaskServiceType!
         
+        beforeEach {
+            taskService = MockTaskServiceType().sample()
+            reactor = TaskListReactor(taskService)
+            viewController = TaskListViewController(reactor: reactor)
+        }
         describe("A TaskListViewController") {
             context("viewDidLoad") {
                 beforeEach {
-//                    reactor = TaskListReactor()
-//                    viewController = TaskListViewController(reactor: reactor)
                     _ = viewController.view
                 }
-                it("asd") {
-                    
+                it("present a cell") {
+                    viewController.taskCollectionView.layoutIfNeeded()
+                    let cell: TaskViewCell = viewController.taskCollectionView.cell(IndexPath(row: 0, section: 0))
+                    expect(cell.titleView.text) == MockTaskServiceType.sampleTasks.first!.title
                 }
             }
-            
         }
     }
 }
-
-

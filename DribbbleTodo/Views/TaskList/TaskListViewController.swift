@@ -14,8 +14,9 @@ import UIKit
 class TaskListViewController: UIViewController {
     let taskCollectionView: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.scrollDirection = .horizontal
+        flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
+        collectionView.register(TaskViewCell.self, forCellWithReuseIdentifier: TaskViewCell.swiftIdentifier)
         collectionView.backgroundColor = .clear
         return collectionView
     }()
@@ -25,6 +26,7 @@ class TaskListViewController: UIViewController {
             guard let cell = cv.dequeueReusableCell(withReuseIdentifier: TaskViewCell.swiftIdentifier, for: ip) as? TaskViewCell else {
                 return UICollectionViewCell()
             }
+            cell.reactor = TaskViewCellReactor(item)
             return cell
         }
     )
@@ -53,12 +55,21 @@ extension TaskListViewController: View, HasDisposeBag {
     func bind(reactor: TaskListReactor) {
         self.taskCollectionView.rx.setDelegate(self).disposed(by: disposeBag)
 
+        self.rx.viewDidLoad
+            .map { Reactor.Action.fetchTasks }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+
         reactor.state.map { $0.items }
+            .filterEmpty()
+            .distinctUntilChanged()
             .bind(to: taskCollectionView.rx.items(dataSource: self.dataSource))
             .disposed(by: disposeBag)
     }
 }
 
 extension TaskListViewController: UICollectionViewDelegateFlowLayout {
-
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: view.frame.width, height: TaskViewCell.Metric.height)
+    }
 }

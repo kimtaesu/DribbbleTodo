@@ -9,9 +9,14 @@
 import Foundation
 import RxDataSources
 
-struct TaskSection {
+struct TaskSection: Equatable {
     var header: String
     var items: [Item]
+
+    public init(items: [Item], header: String = "Tasks") {
+        self.header = header
+        self.items = items
+    }
 }
 
 extension TaskSection: AnimatableSectionModelType {
