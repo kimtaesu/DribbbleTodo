@@ -19,7 +19,7 @@ class TaskListReactorSpec: QuickSpec {
         var reactor: TaskListReactor!
         var taskService: MockTaskServiceType!
         beforeEach {
-            taskService = MockTaskServiceType().sample()
+            taskService = MockTaskServiceType().mockSample()
             reactor = TaskListReactor(taskService)
         }
         describe("A TaskListReactor") {

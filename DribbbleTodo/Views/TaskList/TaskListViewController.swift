@@ -12,6 +12,7 @@ import RxDataSources
 import UIKit
 
 class TaskListViewController: UIViewController {
+    
     let taskCollectionView: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
@@ -21,6 +22,11 @@ class TaskListViewController: UIViewController {
         return collectionView
     }()
 
+    let newTaskButton: UIButton = {
+        let button = UIButton()
+        return button
+    }()
+    
     let dataSource = RxCollectionViewSectionedAnimatedDataSource<TaskSection>(
         configureCell: { ds, cv, ip, item in
             guard let cell = cv.dequeueReusableCell(withReuseIdentifier: TaskViewCell.swiftIdentifier, for: ip) as? TaskViewCell else {
@@ -42,12 +48,24 @@ class TaskListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         taskCollectionView.do {
             view.addSubview($0)
             $0.snp.makeConstraints {
                 $0.edges.equalToSuperview()
             }
         }
+        newTaskButton.do {
+            view.addSubview($0)
+            $0.addTarget(self, action: #selector(showEditViewController), for: .touchUpInside)
+            $0.setImage(Asset.icAdd.image.withRenderingMode(.alwaysTemplate), for: .normal)
+            $0.snp.actionRightBottom(self)
+            $0.apply(ViewStyle.floatingAction())
+        }
+    }
+    @objc
+    func showEditViewController() {
+        self.show(TaskEditViewController(), sender: nil)
     }
 }
 

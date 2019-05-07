@@ -11,6 +11,8 @@ import RealmSwift
 import RxSwift
 
 protocol TaskServiceType {
+    var realm: Realm { get }
+    
     func fetchTasks() -> Observable<[Task]>
     @discardableResult
     func addTasks(_ tasks: [Task]) -> Observable<Result<[Task], Error>>

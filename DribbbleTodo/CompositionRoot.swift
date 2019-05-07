@@ -36,7 +36,8 @@ final class CompositionRoot {
         // swiftlint:disable force_try
         let realm = try! Realm()
         let taskServcie = TaskService(realm)
-        let presentMainScreen = { window.rootViewController = TaskListViewController(reactor: TaskListReactor(taskServcie)) }
+        let presentMainScreen = { window.rootViewController = UINavigationController(rootViewController: TaskListViewController(reactor: TaskListReactor(taskServcie))) }
+//        let presentMainScreen = { window.rootViewController = TaskEditViewController() }
         
         let userService = UserService()
         let splashDependecy = SplashViewController.Dependency(

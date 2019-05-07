@@ -42,7 +42,10 @@ class LoginReactor: Reactor {
         switch mutation {
         case let .setGoogleSignIn(user, error):
             if let error = error {
-                newState.uiAlertView = UIAlertComponent(title: L10n.uiAlertWarningTitle, message: L10n.errorGoogleSignIn(error.localizedDescription))
+                newState.uiAlertView = UIAlertComponent(
+                    title: L10n.uiAlertWarningTitle,
+                    message: L10n.errorGoogleSignIn(error.localizedDescription)
+                )
             } else {
                 newState.user = user
             }

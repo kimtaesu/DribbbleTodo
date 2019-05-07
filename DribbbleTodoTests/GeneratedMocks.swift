@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: DribbbleTodo/Service/TaskServiceType.swift at 2019-05-05 01:25:24 +0000
+// MARK: - Mocks generated from file: DribbbleTodo/Service/TaskServiceType.swift at 2019-05-07 14:25:37 +0000
 
 //
 //  TaskServiceType.swift
@@ -30,6 +30,20 @@ import RxSwift
         cuckoo_manager.enableDefaultStubImplementation()
     }
 
+    
+    
+    
+     var realm: Realm {
+        get {
+            return cuckoo_manager.getter("realm",
+                superclassCall:
+                    
+                    Cuckoo.MockManager.crashOnProtocolSuperclassCall()
+                    ,
+                defaultCall: __defaultImplStub!.realm)
+        }
+        
+    }
     
 
     
@@ -73,6 +87,10 @@ import RxSwift
 	        self.cuckoo_manager = manager
 	    }
 	    
+	    var realm: Cuckoo.ProtocolToBeStubbedReadOnlyProperty<MockTaskServiceType, Realm> {
+	        return .init(manager: cuckoo_manager, name: "realm")
+	    }
+	    
 	    
 	    func fetchTasks() -> Cuckoo.ProtocolStubFunction<(), Observable<[Task]>> {
 	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
@@ -98,6 +116,10 @@ import RxSwift
 	    }
 	
 	    
+	    var realm: Cuckoo.VerifyReadOnlyProperty<Realm> {
+	        return .init(manager: cuckoo_manager, name: "realm", callMatcher: callMatcher, sourceLocation: sourceLocation)
+	    }
+	    
 	
 	    
 	    @discardableResult
@@ -118,6 +140,13 @@ import RxSwift
 
  class TaskServiceTypeStub: TaskServiceType {
     
+     var realm: Realm {
+        get {
+            return DefaultValueRegistry.defaultValue(for: (Realm).self)
+        }
+        
+    }
+    
 
     
 
@@ -133,7 +162,7 @@ import RxSwift
 }
 
 
-// MARK: - Mocks generated from file: DribbbleTodo/Service/UserServiceType.swift at 2019-05-05 01:25:24 +0000
+// MARK: - Mocks generated from file: DribbbleTodo/Service/UserServiceType.swift at 2019-05-07 14:25:37 +0000
 
 //
 //  UserService.swift

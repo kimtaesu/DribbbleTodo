@@ -14,19 +14,30 @@ import RxSwift
 extension MockTaskServiceType {
     
     static let sampleTasks: [Task] = {
-        let aa =  [
+        return [
             Task.random(),
             Task.random(),
             Task.random()
         ]
-        return aa
     }()
-    func sample() -> MockTaskServiceType {
-        stub(self) { mock in
+    
+    func mockSample(mock: MockTaskServiceType? = nil) -> MockTaskServiceType {
+        let mock = mock ?? self
+        stub(mock) { mock in
             when(mock.fetchTasks()).then {
                 return Observable.just(MockTaskServiceType.sampleTasks)
             }
         }
-        return self
+        return mock
+    }
+    
+    func mockAddTasks(mock: MockTaskServiceType? = nil) -> MockTaskServiceType {
+        let mock = mock ?? self
+        stub(mock, block: { mock in
+            mock.addTasks(any()).then({ tasks in
+                Observable.just(Result.success(tasks))
+            })
+        })
+        return mock
     }
 }

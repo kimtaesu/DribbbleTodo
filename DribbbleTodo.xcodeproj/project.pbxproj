@@ -11,7 +11,7 @@
 		BD311143227D61A800FB8217 /* TestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD311142227D61A800FB8217 /* TestError.swift */; };
 		BD311146227D652200FB8217 /* Me.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD311145227D652200FB8217 /* Me.swift */; };
 		BD311148227D669F00FB8217 /* User+Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD311147227D669F00FB8217 /* User+Map.swift */; };
-		BD31114E227D78E600FB8217 /* UIAlertA.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD31114D227D78E600FB8217 /* UIAlertA.swift */; };
+		BD31114E227D78E600FB8217 /* UIAlertComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD31114D227D78E600FB8217 /* UIAlertComponent.swift */; };
 		BD311151227D799E00FB8217 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD31114F227D799E00FB8217 /* Localizable.strings */; };
 		BD311153227D7B4A00FB8217 /* UIViewController+UIAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD311152227D7B4A00FB8217 /* UIViewController+UIAlertViewController.swift */; };
 		BD311156227D820600FB8217 /* TaskEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD311155227D820600FB8217 /* TaskEditViewController.swift */; };
@@ -42,6 +42,14 @@
 		BD3111A6227DF1D900FB8217 /* TaskListReactorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3111A5227DF1D900FB8217 /* TaskListReactorSpec.swift */; };
 		BD3111A8227DF23F00FB8217 /* MockTaskServiceType+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3111A7227DF23F00FB8217 /* MockTaskServiceType+Mock.swift */; };
 		BD3111AA227E72E200FB8217 /* UICollectionView+Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3111A9227E72E200FB8217 /* UICollectionView+Cell.swift */; };
+		BD3111AC227E767300FB8217 /* TaskEditContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3111AB227E767300FB8217 /* TaskEditContainer.swift */; };
+		BD3111AE227E76B700FB8217 /* RootContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3111AD227E76B700FB8217 /* RootContainer.swift */; };
+		BD3111B0227E77CA00FB8217 /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3111AF227E77CA00FB8217 /* DescriptionView.swift */; };
+		BD3111B3227E79DD00FB8217 /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3111B2227E79DD00FB8217 /* XibView.swift */; };
+		BD3111B5227E79F000FB8217 /* UIView+Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3111B4227E79F000FB8217 /* UIView+Blur.swift */; };
+		BD3111B7227E79FB00FB8217 /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3111B6227E79FB00FB8217 /* UIColor+Random.swift */; };
+		BD3111B9227E7A0A00FB8217 /* UIView+Gradients.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3111B8227E7A0A00FB8217 /* UIView+Gradients.swift */; };
+		BD3111BB227E7A5000FB8217 /* RoundShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3111BA227E7A5000FB8217 /* RoundShadowView.swift */; };
 		BD3C9A9D22792CF600E51A34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3C9A9C22792CF600E51A34 /* AppDelegate.swift */; };
 		BD3C9A9F22792CF600E51A34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3C9A9E22792CF600E51A34 /* ViewController.swift */; };
 		BD3C9AA222792CF600E51A34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD3C9AA022792CF600E51A34 /* Main.storyboard */; };
@@ -85,6 +93,11 @@
 		BDE9CC27227B32BD00191DB9 /* SplashViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE9CC26227B32BD00191DB9 /* SplashViewControllerSpec.swift */; };
 		BDE9CC2A227B352100191DB9 /* StubUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE9CC29227B352100191DB9 /* StubUserService.swift */; };
 		BDE9CC2C227B37A200191DB9 /* LoginReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE9CC2B227B37A200191DB9 /* LoginReactor.swift */; };
+		BDFC92752281ABB800D0370C /* ViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFC92742281ABB800D0370C /* ViewStyle.swift */; };
+		BDFC92772281ABCE00D0370C /* ViewStyle+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFC92762281ABCE00D0370C /* ViewStyle+UIButton.swift */; };
+		BDFC92792281AC2A00D0370C /* UIViewController+SafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFC92782281AC2A00D0370C /* UIViewController+SafeArea.swift */; };
+		BDFC927C2281B1C700D0370C /* ConstraintViewDSL+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFC927B2281B1C700D0370C /* ConstraintViewDSL+Layout.swift */; };
+		BDFC927F2281B71300D0370C /* TaskEditReactorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFC927E2281B71300D0370C /* TaskEditReactorSpec.swift */; };
 		F84A1ADF1629B97D461148F7 /* Pods_DribbbleTodo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 298B3403540F96143F191543 /* Pods_DribbbleTodo.framework */; };
 /* End PBXBuildFile section */
 
@@ -110,7 +123,7 @@
 		BD311142227D61A800FB8217 /* TestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestError.swift; sourceTree = "<group>"; };
 		BD311145227D652200FB8217 /* Me.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Me.swift; sourceTree = "<group>"; };
 		BD311147227D669F00FB8217 /* User+Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Map.swift"; sourceTree = "<group>"; };
-		BD31114D227D78E600FB8217 /* UIAlertA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertA.swift; sourceTree = "<group>"; };
+		BD31114D227D78E600FB8217 /* UIAlertComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertComponent.swift; sourceTree = "<group>"; };
 		BD311150227D799E00FB8217 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BD311152227D7B4A00FB8217 /* UIViewController+UIAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIAlertViewController.swift"; sourceTree = "<group>"; };
 		BD311155227D820600FB8217 /* TaskEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +156,14 @@
 		BD3111A5227DF1D900FB8217 /* TaskListReactorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListReactorSpec.swift; sourceTree = "<group>"; };
 		BD3111A7227DF23F00FB8217 /* MockTaskServiceType+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MockTaskServiceType+Mock.swift"; sourceTree = "<group>"; };
 		BD3111A9227E72E200FB8217 /* UICollectionView+Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Cell.swift"; sourceTree = "<group>"; };
+		BD3111AB227E767300FB8217 /* TaskEditContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditContainer.swift; sourceTree = "<group>"; };
+		BD3111AD227E76B700FB8217 /* RootContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootContainer.swift; sourceTree = "<group>"; };
+		BD3111AF227E77CA00FB8217 /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
+		BD3111B2227E79DD00FB8217 /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
+		BD3111B4227E79F000FB8217 /* UIView+Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Blur.swift"; sourceTree = "<group>"; };
+		BD3111B6227E79FB00FB8217 /* UIColor+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
+		BD3111B8227E7A0A00FB8217 /* UIView+Gradients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradients.swift"; sourceTree = "<group>"; };
+		BD3111BA227E7A5000FB8217 /* RoundShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundShadowView.swift; sourceTree = "<group>"; };
 		BD3C9A9922792CF600E51A34 /* DribbbleTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DribbbleTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD3C9A9C22792CF600E51A34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD3C9A9E22792CF600E51A34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -190,6 +211,11 @@
 		BDE9CC26227B32BD00191DB9 /* SplashViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewControllerSpec.swift; sourceTree = "<group>"; };
 		BDE9CC29227B352100191DB9 /* StubUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubUserService.swift; sourceTree = "<group>"; };
 		BDE9CC2B227B37A200191DB9 /* LoginReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginReactor.swift; sourceTree = "<group>"; };
+		BDFC92742281ABB800D0370C /* ViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStyle.swift; sourceTree = "<group>"; };
+		BDFC92762281ABCE00D0370C /* ViewStyle+UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewStyle+UIButton.swift"; sourceTree = "<group>"; };
+		BDFC92782281AC2A00D0370C /* UIViewController+SafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+SafeArea.swift"; sourceTree = "<group>"; };
+		BDFC927B2281B1C700D0370C /* ConstraintViewDSL+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConstraintViewDSL+Layout.swift"; sourceTree = "<group>"; };
+		BDFC927E2281B71300D0370C /* TaskEditReactorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditReactorSpec.swift; sourceTree = "<group>"; };
 		C129BF59E2E624E8CFB396EB /* Pods_DribbbleTodoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DribbbleTodoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -262,6 +288,8 @@
 			children = (
 				BD311155227D820600FB8217 /* TaskEditViewController.swift */,
 				BD311157227D820F00FB8217 /* TaskEditReactor.swift */,
+				BD3111AB227E767300FB8217 /* TaskEditContainer.swift */,
+				BD3111AF227E77CA00FB8217 /* DescriptionView.swift */,
 			);
 			path = TaskEdit;
 			sourceTree = "<group>";
@@ -301,6 +329,18 @@
 				BD31119E227DEA8700FB8217 /* TaskServiceSpec.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		BD3111B1227E79D600FB8217 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BD3111B2227E79DD00FB8217 /* XibView.swift */,
+				BD3111B4227E79F000FB8217 /* UIView+Blur.swift */,
+				BD3111B6227E79FB00FB8217 /* UIColor+Random.swift */,
+				BD3111B8227E7A0A00FB8217 /* UIView+Gradients.swift */,
+				BD3111BA227E7A5000FB8217 /* RoundShadowView.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		BD3C9A9022792CF600E51A34 = {
@@ -348,6 +388,7 @@
 				BD784102227B02A6001E5DEE /* HasDisposeBag.swift */,
 				BD784108227B03C0001E5DEE /* main.swift */,
 				BD31117B227DCD3200FB8217 /* SwiftNameIdentifier.swift */,
+				BD3111AD227E76B700FB8217 /* RootContainer.swift */,
 			);
 			path = DribbbleTodo;
 			sourceTree = "<group>";
@@ -416,14 +457,18 @@
 		BD7840FB227B01ED001E5DEE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BDFC92802281C3C400D0370C /* UIAlertComponent */,
+				BDFC927A2281B1C000D0370C /* Layout */,
+				BDFC92732281ABA600D0370C /* Styles */,
+				BD3111B1227E79D600FB8217 /* Common */,
 				BD311159227D826100FB8217 /* CalendarWeek */,
 				BD311154227D81E700FB8217 /* TaskEdit */,
 				BDE9CC14227B2B6100191DB9 /* Login */,
 				BD784105227B02D3001E5DEE /* TaskList */,
 				BD784104227B02CB001E5DEE /* Splash */,
 				BDE9CC12227B29C300191DB9 /* UIViewController+Rx.swift */,
-				BD31114D227D78E600FB8217 /* UIAlertA.swift */,
 				BD31117F227DD0E700FB8217 /* CheckBox.swift */,
+				BDFC92782281AC2A00D0370C /* UIViewController+SafeArea.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -497,6 +542,7 @@
 		BDE9CC17227B2B9400191DB9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BDFC927D2281B70900D0370C /* TaskEdit */,
 				BD311185227DD60F00FB8217 /* TaskList */,
 				BD31115E227D847A00FB8217 /* Date */,
 				BDE1BDA2227D3C5100BE2419 /* Login */,
@@ -537,6 +583,39 @@
 				BD3111A7227DF23F00FB8217 /* MockTaskServiceType+Mock.swift */,
 			);
 			path = Stub;
+			sourceTree = "<group>";
+		};
+		BDFC92732281ABA600D0370C /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				BDFC92742281ABB800D0370C /* ViewStyle.swift */,
+				BDFC92762281ABCE00D0370C /* ViewStyle+UIButton.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		BDFC927A2281B1C000D0370C /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				BDFC927B2281B1C700D0370C /* ConstraintViewDSL+Layout.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		BDFC927D2281B70900D0370C /* TaskEdit */ = {
+			isa = PBXGroup;
+			children = (
+				BDFC927E2281B71300D0370C /* TaskEditReactorSpec.swift */,
+			);
+			path = TaskEdit;
+			sourceTree = "<group>";
+		};
+		BDFC92802281C3C400D0370C /* UIAlertComponent */ = {
+			isa = PBXGroup;
+			children = (
+				BD31114D227D78E600FB8217 /* UIAlertComponent.swift */,
+			);
+			path = UIAlertComponent;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -943,22 +1022,31 @@
 			files = (
 				BD311156227D820600FB8217 /* TaskEditViewController.swift in Sources */,
 				BDE9CC16227B2B6800191DB9 /* LoginViewController.swift in Sources */,
-				BD31114E227D78E600FB8217 /* UIAlertA.swift in Sources */,
+				BDFC92792281AC2A00D0370C /* UIViewController+SafeArea.swift in Sources */,
+				BD31114E227D78E600FB8217 /* UIAlertComponent.swift in Sources */,
 				BD784109227B03C0001E5DEE /* main.swift in Sources */,
 				BD3C9AE422792DD200E51A34 /* Fonts.swift in Sources */,
+				BD3111BB227E7A5000FB8217 /* RoundShadowView.swift in Sources */,
 				BD31117C227DCD3200FB8217 /* SwiftNameIdentifier.swift in Sources */,
 				BD31117E227DCE6800FB8217 /* TaskViewCellReactor.swift in Sources */,
+				BDFC92752281ABB800D0370C /* ViewStyle.swift in Sources */,
+				BD3111B0227E77CA00FB8217 /* DescriptionView.swift in Sources */,
+				BD3111B7227E79FB00FB8217 /* UIColor+Random.swift in Sources */,
 				BD3C9AA522792CF600E51A34 /* DribbbleTodo.xcdatamodeld in Sources */,
 				BD784103227B02A6001E5DEE /* HasDisposeBag.swift in Sources */,
 				BD3C9AE522792DD200E51A34 /* Plist.swift in Sources */,
 				BD311176227DCB3100FB8217 /* TaskSection.swift in Sources */,
 				BD3C9AE222792DD200E51A34 /* L10n.swift in Sources */,
 				BD3C9AE322792DD200E51A34 /* MyColor.swift in Sources */,
+				BDFC92772281ABCE00D0370C /* ViewStyle+UIButton.swift in Sources */,
+				BD3111AE227E76B700FB8217 /* RootContainer.swift in Sources */,
 				BD311168227D989D00FB8217 /* CalendarWeekReactor.swift in Sources */,
 				BDE9CC2C227B37A200191DB9 /* LoginReactor.swift in Sources */,
+				BD3111B5227E79F000FB8217 /* UIView+Blur.swift in Sources */,
 				BD311189227DD74A00FB8217 /* TaskServiceType.swift in Sources */,
 				BD7840FF227B0220001E5DEE /* SplashReactor.swift in Sources */,
 				BD3C9A9F22792CF600E51A34 /* ViewController.swift in Sources */,
+				BD3111B9227E7A0A00FB8217 /* UIView+Gradients.swift in Sources */,
 				BDE9CC13227B29C300191DB9 /* UIViewController+Rx.swift in Sources */,
 				BD784107227B02E4001E5DEE /* TaskListViewController.swift in Sources */,
 				BD311166227D96D300FB8217 /* CalendarWeekCell.swift in Sources */,
@@ -966,6 +1054,7 @@
 				BD31117A227DCCF600FB8217 /* TaskViewCell.swift in Sources */,
 				BD311158227D820F00FB8217 /* TaskEditReactor.swift in Sources */,
 				BD311180227DD0E700FB8217 /* CheckBox.swift in Sources */,
+				BD3111AC227E767300FB8217 /* TaskEditContainer.swift in Sources */,
 				BDE9CC1D227B2C9400191DB9 /* UserServiceType.swift in Sources */,
 				BD3C9AE122792DD200E51A34 /* Assets.swift in Sources */,
 				BD311162227D94A100FB8217 /* DayOfWeek.swift in Sources */,
@@ -981,7 +1070,9 @@
 				BD31118B227DD7B600FB8217 /* TaskService.swift in Sources */,
 				BD7840FD227B01F5001E5DEE /* SplashViewController.swift in Sources */,
 				BD311170227DBE4E00FB8217 /* Task.swift in Sources */,
+				BD3111B3227E79DD00FB8217 /* XibView.swift in Sources */,
 				BDE9CC11227B295800191DB9 /* TaskListReactor.swift in Sources */,
+				BDFC927C2281B1C700D0370C /* ConstraintViewDSL+Layout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1008,6 +1099,7 @@
 				BD3111A6227DF1D900FB8217 /* TaskListReactorSpec.swift in Sources */,
 				BD3111A4227DEBF300FB8217 /* RandomText.swift in Sources */,
 				BDE1BDA4227D3C5900BE2419 /* LoginReactorSpec.swift in Sources */,
+				BDFC927F2281B71300D0370C /* TaskEditReactorSpec.swift in Sources */,
 				BD31119F227DEA8700FB8217 /* TaskServiceSpec.swift in Sources */,
 				BDE9CC22227B2EC400191DB9 /* GeneratedMocks.swift in Sources */,
 				BD31116C227D99E800FB8217 /* Date+Day.swift in Sources */,

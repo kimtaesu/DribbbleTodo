@@ -17,7 +17,7 @@ class TaskListViewControllerSpec: QuickSpec {
         var taskService: MockTaskServiceType!
         
         beforeEach {
-            taskService = MockTaskServiceType().sample()
+            taskService = MockTaskServiceType().mockSample()
             reactor = TaskListReactor(taskService)
             viewController = TaskListViewController(reactor: reactor)
         }

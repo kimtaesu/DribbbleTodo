@@ -51,7 +51,7 @@ extension LoginViewController: GIDSignInUIDelegate, GIDSignInDelegate {
         guard let authentication = user.authentication else { return }
         let credential = GoogleAuthProvider.credential(
             withIDToken: authentication.idToken,
-            accessToken: authentication.accessToken
+            accessToken: "asdasd"
         )
         Auth.auth().signInAndRetrieveData(with: credential) { [weak self] result, error in
             logger.info("result: [\(String(describing: result))] error: [\(String(describing: error))]")
