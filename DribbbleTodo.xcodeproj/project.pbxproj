@@ -22,7 +22,7 @@
 		BD311160227D848000FB8217 /* DateDaySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD31115F227D848000FB8217 /* DateDaySpec.swift */; };
 		BD311162227D94A100FB8217 /* DayOfWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD311161227D94A100FB8217 /* DayOfWeek.swift */; };
 		BD311164227D94AF00FB8217 /* DateDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD311163227D94AF00FB8217 /* DateDay.swift */; };
-		BD311166227D96D300FB8217 /* CalendarWeekCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD311165227D96D300FB8217 /* CalendarWeekCell.swift */; };
+		BD311166227D96D300FB8217 /* CalendarWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD311165227D96D300FB8217 /* CalendarWeekView.swift */; };
 		BD311168227D989D00FB8217 /* CalendarWeekReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD311167227D989D00FB8217 /* CalendarWeekReactor.swift */; };
 		BD31116A227D98E600FB8217 /* CalendarWeekReactorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD311169227D98E600FB8217 /* CalendarWeekReactorSpec.swift */; };
 		BD31116C227D99E800FB8217 /* Date+Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD31116B227D99E800FB8217 /* Date+Day.swift */; };
@@ -81,6 +81,11 @@
 		BD784109227B03C0001E5DEE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD784108227B03C0001E5DEE /* main.swift */; };
 		BD78410B227B04CB001E5DEE /* StubAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD78410A227B04CB001E5DEE /* StubAppDelegate.swift */; };
 		BD78410D227B04F2001E5DEE /* TestConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD78410C227B04F2001E5DEE /* TestConfiguration.swift */; };
+		BDA777DB228312EA00067F48 /* CarlendarDayOfWeekSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA777DA228312EA00067F48 /* CarlendarDayOfWeekSection.swift */; };
+		BDA777DF228318E100067F48 /* CalendarHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA777DE228318E100067F48 /* CalendarHeader.swift */; };
+		BDA777E122831A9100067F48 /* CalendarDayOfWeekViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA777E022831A9100067F48 /* CalendarDayOfWeekViewModel.swift */; };
+		BDA777E322831ABC00067F48 /* CalendarDayOfWeekCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA777E222831ABC00067F48 /* CalendarDayOfWeekCell.swift */; };
+		BDA777E522831AE800067F48 /* CalendarDayOfWeekReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA777E422831AE800067F48 /* CalendarDayOfWeekReactor.swift */; };
 		BDE1BDA4227D3C5900BE2419 /* LoginReactorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE1BDA3227D3C5900BE2419 /* LoginReactorSpec.swift */; };
 		BDE1BDAB227D48DA00BE2419 /* LoginViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE1BDAA227D48DA00BE2419 /* LoginViewControllerSpec.swift */; };
 		BDE1BDBA227D509400BE2419 /* GoogleService-Info-Test.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDE1BDB8227D509300BE2419 /* GoogleService-Info-Test.plist */; };
@@ -139,7 +144,7 @@
 		BD31115F227D848000FB8217 /* DateDaySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDaySpec.swift; sourceTree = "<group>"; };
 		BD311161227D94A100FB8217 /* DayOfWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayOfWeek.swift; sourceTree = "<group>"; };
 		BD311163227D94AF00FB8217 /* DateDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDay.swift; sourceTree = "<group>"; };
-		BD311165227D96D300FB8217 /* CalendarWeekCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarWeekCell.swift; sourceTree = "<group>"; };
+		BD311165227D96D300FB8217 /* CalendarWeekView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarWeekView.swift; sourceTree = "<group>"; };
 		BD311167227D989D00FB8217 /* CalendarWeekReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarWeekReactor.swift; sourceTree = "<group>"; };
 		BD311169227D98E600FB8217 /* CalendarWeekReactorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarWeekReactorSpec.swift; sourceTree = "<group>"; };
 		BD31116B227D99E800FB8217 /* Date+Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Day.swift"; sourceTree = "<group>"; };
@@ -204,6 +209,11 @@
 		BD784108227B03C0001E5DEE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		BD78410A227B04CB001E5DEE /* StubAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubAppDelegate.swift; sourceTree = "<group>"; };
 		BD78410C227B04F2001E5DEE /* TestConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConfiguration.swift; sourceTree = "<group>"; };
+		BDA777DA228312EA00067F48 /* CarlendarDayOfWeekSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarlendarDayOfWeekSection.swift; sourceTree = "<group>"; };
+		BDA777DE228318E100067F48 /* CalendarHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHeader.swift; sourceTree = "<group>"; };
+		BDA777E022831A9100067F48 /* CalendarDayOfWeekViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarDayOfWeekViewModel.swift; sourceTree = "<group>"; };
+		BDA777E222831ABC00067F48 /* CalendarDayOfWeekCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarDayOfWeekCell.swift; sourceTree = "<group>"; };
+		BDA777E422831AE800067F48 /* CalendarDayOfWeekReactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarDayOfWeekReactor.swift; sourceTree = "<group>"; };
 		BDE1BDA3227D3C5900BE2419 /* LoginReactorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginReactorSpec.swift; sourceTree = "<group>"; };
 		BDE1BDAA227D48DA00BE2419 /* LoginViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerSpec.swift; sourceTree = "<group>"; };
 		BDE1BDB8227D509300BE2419 /* GoogleService-Info-Test.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Test.plist"; sourceTree = "<group>"; };
@@ -307,10 +317,15 @@
 		BD311159227D826100FB8217 /* CalendarWeek */ = {
 			isa = PBXGroup;
 			children = (
-				BD311165227D96D300FB8217 /* CalendarWeekCell.swift */,
+				BDA777E422831AE800067F48 /* CalendarDayOfWeekReactor.swift */,
+				BDA777E222831ABC00067F48 /* CalendarDayOfWeekCell.swift */,
+				BDA777E022831A9100067F48 /* CalendarDayOfWeekViewModel.swift */,
+				BD311165227D96D300FB8217 /* CalendarWeekView.swift */,
 				BD311161227D94A100FB8217 /* DayOfWeek.swift */,
 				BD311163227D94AF00FB8217 /* DateDay.swift */,
 				BD311167227D989D00FB8217 /* CalendarWeekReactor.swift */,
+				BDA777DA228312EA00067F48 /* CarlendarDayOfWeekSection.swift */,
+				BDA777DE228318E100067F48 /* CalendarHeader.swift */,
 			);
 			path = CalendarWeek;
 			sourceTree = "<group>";
@@ -1049,7 +1064,9 @@
 				BDFC92752281ABB800D0370C /* ViewStyle.swift in Sources */,
 				BD3111B0227E77CA00FB8217 /* DescriptionView.swift in Sources */,
 				BD3111B7227E79FB00FB8217 /* UIColor+Random.swift in Sources */,
+				BDA777E322831ABC00067F48 /* CalendarDayOfWeekCell.swift in Sources */,
 				BD3C9AA522792CF600E51A34 /* DribbbleTodo.xcdatamodeld in Sources */,
+				BDA777DF228318E100067F48 /* CalendarHeader.swift in Sources */,
 				BD784103227B02A6001E5DEE /* HasDisposeBag.swift in Sources */,
 				BD3C9AE522792DD200E51A34 /* Plist.swift in Sources */,
 				BD311176227DCB3100FB8217 /* TaskSection.swift in Sources */,
@@ -1057,6 +1074,7 @@
 				BD3C9AE322792DD200E51A34 /* MyColor.swift in Sources */,
 				BDFC92772281ABCE00D0370C /* ViewStyle+UIButton.swift in Sources */,
 				BD3111AE227E76B700FB8217 /* RootContainer.swift in Sources */,
+				BDA777E122831A9100067F48 /* CalendarDayOfWeekViewModel.swift in Sources */,
 				BD311168227D989D00FB8217 /* CalendarWeekReactor.swift in Sources */,
 				BDE9CC2C227B37A200191DB9 /* LoginReactor.swift in Sources */,
 				BD3111B5227E79F000FB8217 /* UIView+Blur.swift in Sources */,
@@ -1066,14 +1084,16 @@
 				BD3111B9227E7A0A00FB8217 /* UIView+Gradients.swift in Sources */,
 				BDE9CC13227B29C300191DB9 /* UIViewController+Rx.swift in Sources */,
 				BD784107227B02E4001E5DEE /* TaskListViewController.swift in Sources */,
-				BD311166227D96D300FB8217 /* CalendarWeekCell.swift in Sources */,
+				BD311166227D96D300FB8217 /* CalendarWeekView.swift in Sources */,
 				BD784101227B0242001E5DEE /* Logger.swift in Sources */,
 				BD31117A227DCCF600FB8217 /* TaskViewCell.swift in Sources */,
 				BD311158227D820F00FB8217 /* TaskEditReactor.swift in Sources */,
 				BD311180227DD0E700FB8217 /* CheckBox.swift in Sources */,
 				BD3111AC227E767300FB8217 /* TaskEditContainer.swift in Sources */,
 				BDE9CC1D227B2C9400191DB9 /* UserServiceType.swift in Sources */,
+				BDA777E522831AE800067F48 /* CalendarDayOfWeekReactor.swift in Sources */,
 				BD3C9AE122792DD200E51A34 /* Assets.swift in Sources */,
+				BDA777DB228312EA00067F48 /* CarlendarDayOfWeekSection.swift in Sources */,
 				BD311162227D94A100FB8217 /* DayOfWeek.swift in Sources */,
 				BD311153227D7B4A00FB8217 /* UIViewController+UIAlertViewController.swift in Sources */,
 				BD311178227DCB3F00FB8217 /* TaskViewModel.swift in Sources */,

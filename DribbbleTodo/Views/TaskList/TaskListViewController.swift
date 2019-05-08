@@ -28,7 +28,6 @@ class TaskListViewController: UIViewController {
         return button
     }()
     
-    
     let dataSource = RxCollectionViewSectionedAnimatedDataSource<TaskSection>(
         configureCell: { ds, cv, ip, item in
             guard let cell = cv.dequeueReusableCell(withReuseIdentifier: TaskViewCell.swiftIdentifier, for: ip) as? TaskViewCell else {
