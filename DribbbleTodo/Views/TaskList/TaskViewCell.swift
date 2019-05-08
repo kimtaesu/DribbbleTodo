@@ -22,7 +22,6 @@ class TaskViewCell: UICollectionViewCell, SwiftNameIdentifier {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        contentView.backgroundColor = UIColor.blue
         checkBox.do {
             contentView.addSubview($0)
             $0.snp.makeConstraints {

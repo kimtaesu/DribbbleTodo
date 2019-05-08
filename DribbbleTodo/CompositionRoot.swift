@@ -10,6 +10,7 @@ import Fabric
 import Firebase
 import FirebaseCore
 import GoogleSignIn
+import Hero
 import RealmSwift
 import RxCocoa
 import RxOptional
@@ -32,13 +33,11 @@ final class CompositionRoot {
         let window = UIWindow()
         window.backgroundColor = .white
         window.makeKeyAndVisible()
-        
-        // swiftlint:disable force_try
-        let realm = try! Realm()
-        let taskServcie = TaskService(realm)
-        let presentMainScreen = { window.rootViewController = UINavigationController(rootViewController: TaskListViewController(reactor: TaskListReactor(taskServcie))) }
+
+        let taskListReactor = taskListContainer.resolve(TaskListReactor.self)!
+        let presentMainScreen = { window.rootViewController = UINavigationController(rootViewController: TaskListViewController(reactor: taskListReactor)) }
 //        let presentMainScreen = { window.rootViewController = TaskEditViewController() }
-        
+
         let userService = UserService()
         let splashDependecy = SplashViewController.Dependency(
             reactor: SplashReactor(userService),
@@ -67,7 +66,7 @@ final class CompositionRoot {
         FirebaseApp.configure(options: options!)
         GIDSignIn.sharedInstance()?.clientID = PlistFiles.googleSignInClientId
     }
-    
+
     static func openURLFactory() -> AppDependency.OpenURLHandler {
         return { url, options -> Bool in
             logger.info("openURLFactory: url[\(url)] options[\(options)]")

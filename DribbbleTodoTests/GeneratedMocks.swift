@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: DribbbleTodo/Service/TaskServiceType.swift at 2019-05-07 14:25:37 +0000
+// MARK: - Mocks generated from file: DribbbleTodo/Service/TaskServiceType.swift at 2019-05-08 12:10:21 +0000
 
 //
 //  TaskServiceType.swift
@@ -66,16 +66,16 @@ import RxSwift
     
     
     
-     func addTasks(_ tasks: [Task])  -> Observable<Result<[Task], Error>> {
+     func addTask(_ tasks: Task)  -> Observable<Result<Task, Error>> {
         
-            return cuckoo_manager.call("addTasks(_: [Task]) -> Observable<Result<[Task], Error>>",
+            return cuckoo_manager.call("addTask(_: Task) -> Observable<Result<Task, Error>>",
                 parameters: (tasks),
                 escapingParameters: (tasks),
                 superclassCall:
                     
                     Cuckoo.MockManager.crashOnProtocolSuperclassCall()
                     ,
-                defaultCall: __defaultImplStub!.addTasks(tasks))
+                defaultCall: __defaultImplStub!.addTask(tasks))
         
     }
     
@@ -97,9 +97,9 @@ import RxSwift
 	        return .init(stub: cuckoo_manager.createStub(for: MockTaskServiceType.self, method: "fetchTasks() -> Observable<[Task]>", parameterMatchers: matchers))
 	    }
 	    
-	    func addTasks<M1: Cuckoo.Matchable>(_ tasks: M1) -> Cuckoo.ProtocolStubFunction<([Task]), Observable<Result<[Task], Error>>> where M1.MatchedType == [Task] {
-	        let matchers: [Cuckoo.ParameterMatcher<([Task])>] = [wrap(matchable: tasks) { $0 }]
-	        return .init(stub: cuckoo_manager.createStub(for: MockTaskServiceType.self, method: "addTasks(_: [Task]) -> Observable<Result<[Task], Error>>", parameterMatchers: matchers))
+	    func addTask<M1: Cuckoo.Matchable>(_ tasks: M1) -> Cuckoo.ProtocolStubFunction<(Task), Observable<Result<Task, Error>>> where M1.MatchedType == Task {
+	        let matchers: [Cuckoo.ParameterMatcher<(Task)>] = [wrap(matchable: tasks) { $0 }]
+	        return .init(stub: cuckoo_manager.createStub(for: MockTaskServiceType.self, method: "addTask(_: Task) -> Observable<Result<Task, Error>>", parameterMatchers: matchers))
 	    }
 	    
 	}
@@ -129,9 +129,9 @@ import RxSwift
 	    }
 	    
 	    @discardableResult
-	    func addTasks<M1: Cuckoo.Matchable>(_ tasks: M1) -> Cuckoo.__DoNotUse<Observable<Result<[Task], Error>>> where M1.MatchedType == [Task] {
-	        let matchers: [Cuckoo.ParameterMatcher<([Task])>] = [wrap(matchable: tasks) { $0 }]
-	        return cuckoo_manager.verify("addTasks(_: [Task]) -> Observable<Result<[Task], Error>>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+	    func addTask<M1: Cuckoo.Matchable>(_ tasks: M1) -> Cuckoo.__DoNotUse<Observable<Result<Task, Error>>> where M1.MatchedType == Task {
+	        let matchers: [Cuckoo.ParameterMatcher<(Task)>] = [wrap(matchable: tasks) { $0 }]
+	        return cuckoo_manager.verify("addTask(_: Task) -> Observable<Result<Task, Error>>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
 	    }
 	    
 	}
@@ -155,14 +155,14 @@ import RxSwift
         return DefaultValueRegistry.defaultValue(for: Observable<[Task]>.self)
     }
     
-     func addTasks(_ tasks: [Task])  -> Observable<Result<[Task], Error>> {
-        return DefaultValueRegistry.defaultValue(for: Observable<Result<[Task], Error>>.self)
+     func addTask(_ tasks: Task)  -> Observable<Result<Task, Error>> {
+        return DefaultValueRegistry.defaultValue(for: Observable<Result<Task, Error>>.self)
     }
     
 }
 
 
-// MARK: - Mocks generated from file: DribbbleTodo/Service/UserServiceType.swift at 2019-05-07 14:25:37 +0000
+// MARK: - Mocks generated from file: DribbbleTodo/Service/UserServiceType.swift at 2019-05-08 12:10:21 +0000
 
 //
 //  UserService.swift

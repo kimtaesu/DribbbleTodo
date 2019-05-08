@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5F9B3CA720D5836900469C8B /* Pods_DribbbleTodoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E922015D4C37290EC86C720 /* Pods_DribbbleTodoTests.framework */; };
+		BD0961DF2282ECA800B666A2 /* Task+Equal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0961DE2282ECA800B666A2 /* Task+Equal.swift */; };
+		BD0961E12282EDC800B666A2 /* TaskEditViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0961E02282EDC800B666A2 /* TaskEditViewControllerSpec.swift */; };
+		BD0961E32282EFA900B666A2 /* RxTestDispatcherSchedulers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0961E22282EFA900B666A2 /* RxTestDispatcherSchedulers.swift */; };
 		BD311143227D61A800FB8217 /* TestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD311142227D61A800FB8217 /* TestError.swift */; };
 		BD311146227D652200FB8217 /* Me.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD311145227D652200FB8217 /* Me.swift */; };
 		BD311148227D669F00FB8217 /* User+Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD311147227D669F00FB8217 /* User+Map.swift */; };
@@ -98,6 +101,8 @@
 		BDFC92792281AC2A00D0370C /* UIViewController+SafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFC92782281AC2A00D0370C /* UIViewController+SafeArea.swift */; };
 		BDFC927C2281B1C700D0370C /* ConstraintViewDSL+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFC927B2281B1C700D0370C /* ConstraintViewDSL+Layout.swift */; };
 		BDFC927F2281B71300D0370C /* TaskEditReactorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFC927E2281B71300D0370C /* TaskEditReactorSpec.swift */; };
+		BDFC92842281D36700D0370C /* RxDispatcherSchedulers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFC92832281D36700D0370C /* RxDispatcherSchedulers.swift */; };
+		BDFC928622825D5700D0370C /* TaskListContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFC928522825D5700D0370C /* TaskListContainer.swift */; };
 		F84A1ADF1629B97D461148F7 /* Pods_DribbbleTodo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 298B3403540F96143F191543 /* Pods_DribbbleTodo.framework */; };
 /* End PBXBuildFile section */
 
@@ -120,6 +125,9 @@
 		4C9AA46AAF51E6D15E901E73 /* Pods-DribbbleTodoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DribbbleTodoTests.debug.xcconfig"; path = "Target Support Files/Pods-DribbbleTodoTests/Pods-DribbbleTodoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4EB8D2B8CD419E46D0EBD8CC /* Pods-DribbbleTodoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DribbbleTodoUITests.release.xcconfig"; path = "Target Support Files/Pods-DribbbleTodoUITests/Pods-DribbbleTodoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B739655DA1A87115E1CE4D96 /* Pods-DribbbleTodo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DribbbleTodo.release.xcconfig"; path = "Target Support Files/Pods-DribbbleTodo/Pods-DribbbleTodo.release.xcconfig"; sourceTree = "<group>"; };
+		BD0961DE2282ECA800B666A2 /* Task+Equal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+Equal.swift"; sourceTree = "<group>"; };
+		BD0961E02282EDC800B666A2 /* TaskEditViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditViewControllerSpec.swift; sourceTree = "<group>"; };
+		BD0961E22282EFA900B666A2 /* RxTestDispatcherSchedulers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxTestDispatcherSchedulers.swift; sourceTree = "<group>"; };
 		BD311142227D61A800FB8217 /* TestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestError.swift; sourceTree = "<group>"; };
 		BD311145227D652200FB8217 /* Me.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Me.swift; sourceTree = "<group>"; };
 		BD311147227D669F00FB8217 /* User+Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Map.swift"; sourceTree = "<group>"; };
@@ -216,6 +224,8 @@
 		BDFC92782281AC2A00D0370C /* UIViewController+SafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+SafeArea.swift"; sourceTree = "<group>"; };
 		BDFC927B2281B1C700D0370C /* ConstraintViewDSL+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConstraintViewDSL+Layout.swift"; sourceTree = "<group>"; };
 		BDFC927E2281B71300D0370C /* TaskEditReactorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditReactorSpec.swift; sourceTree = "<group>"; };
+		BDFC92832281D36700D0370C /* RxDispatcherSchedulers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxDispatcherSchedulers.swift; sourceTree = "<group>"; };
+		BDFC928522825D5700D0370C /* TaskListContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListContainer.swift; sourceTree = "<group>"; };
 		C129BF59E2E624E8CFB396EB /* Pods_DribbbleTodoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DribbbleTodoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -396,9 +406,9 @@
 		BD3C9AB322792CF800E51A34 /* DribbbleTodoTests */ = {
 			isa = PBXGroup;
 			children = (
+				BDE9CC21227B2EC400191DB9 /* GeneratedMocks.swift */,
 				BD31119D227DEA7F00FB8217 /* Services */,
 				BDE9CC28227B351200191DB9 /* Stub */,
-				BDE9CC21227B2EC400191DB9 /* GeneratedMocks.swift */,
 				BDE9CC17227B2B9400191DB9 /* Views */,
 				BD3C9AB422792CF800E51A34 /* DribbbleTodoTests.swift */,
 				BD3C9AB622792CF800E51A34 /* Info.plist */,
@@ -406,6 +416,8 @@
 				BD311183227DD4C200FB8217 /* RealmConfiguration.swift */,
 				BD311142227D61A800FB8217 /* TestError.swift */,
 				BD3111A9227E72E200FB8217 /* UICollectionView+Cell.swift */,
+				BD0961DE2282ECA800B666A2 /* Task+Equal.swift */,
+				BD0961E22282EFA900B666A2 /* RxTestDispatcherSchedulers.swift */,
 			);
 			path = DribbbleTodoTests;
 			sourceTree = "<group>";
@@ -491,6 +503,7 @@
 				BD311177227DCB3F00FB8217 /* TaskViewModel.swift */,
 				BD311179227DCCF600FB8217 /* TaskViewCell.swift */,
 				BD31117D227DCE6800FB8217 /* TaskViewCellReactor.swift */,
+				BDFC928522825D5700D0370C /* TaskListContainer.swift */,
 			);
 			path = TaskList;
 			sourceTree = "<group>";
@@ -517,6 +530,7 @@
 			isa = PBXGroup;
 			children = (
 				BD311152227D7B4A00FB8217 /* UIViewController+UIAlertViewController.swift */,
+				BDFC92832281D36700D0370C /* RxDispatcherSchedulers.swift */,
 			);
 			path = Rx;
 			sourceTree = "<group>";
@@ -606,6 +620,7 @@
 			isa = PBXGroup;
 			children = (
 				BDFC927E2281B71300D0370C /* TaskEditReactorSpec.swift */,
+				BD0961E02282EDC800B666A2 /* TaskEditViewControllerSpec.swift */,
 			);
 			path = TaskEdit;
 			sourceTree = "<group>";
@@ -859,6 +874,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Hero.framework",
 			);
 			name = "[CP] Copy Carthage Resources";
 			outputFileListPaths = (
@@ -1025,6 +1041,7 @@
 				BDFC92792281AC2A00D0370C /* UIViewController+SafeArea.swift in Sources */,
 				BD31114E227D78E600FB8217 /* UIAlertComponent.swift in Sources */,
 				BD784109227B03C0001E5DEE /* main.swift in Sources */,
+				BDFC928622825D5700D0370C /* TaskListContainer.swift in Sources */,
 				BD3C9AE422792DD200E51A34 /* Fonts.swift in Sources */,
 				BD3111BB227E7A5000FB8217 /* RoundShadowView.swift in Sources */,
 				BD31117C227DCD3200FB8217 /* SwiftNameIdentifier.swift in Sources */,
@@ -1070,6 +1087,7 @@
 				BD31118B227DD7B600FB8217 /* TaskService.swift in Sources */,
 				BD7840FD227B01F5001E5DEE /* SplashViewController.swift in Sources */,
 				BD311170227DBE4E00FB8217 /* Task.swift in Sources */,
+				BDFC92842281D36700D0370C /* RxDispatcherSchedulers.swift in Sources */,
 				BD3111B3227E79DD00FB8217 /* XibView.swift in Sources */,
 				BDE9CC11227B295800191DB9 /* TaskListReactor.swift in Sources */,
 				BDFC927C2281B1C700D0370C /* ConstraintViewDSL+Layout.swift in Sources */,
@@ -1081,8 +1099,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD3111AA227E72E200FB8217 /* UICollectionView+Cell.swift in Sources */,
+				BD0961DF2282ECA800B666A2 /* Task+Equal.swift in Sources */,
 				BDE9CC1A227B2BA900191DB9 /* SplashReactorSpec.swift in Sources */,
 				BD78410B227B04CB001E5DEE /* StubAppDelegate.swift in Sources */,
+				BD0961E12282EDC800B666A2 /* TaskEditViewControllerSpec.swift in Sources */,
 				BDE9CC27227B32BD00191DB9 /* SplashViewControllerSpec.swift in Sources */,
 				BD311143227D61A800FB8217 /* TestError.swift in Sources */,
 				BD78410D227B04F2001E5DEE /* TestConfiguration.swift in Sources */,
@@ -1100,6 +1120,7 @@
 				BD3111A4227DEBF300FB8217 /* RandomText.swift in Sources */,
 				BDE1BDA4227D3C5900BE2419 /* LoginReactorSpec.swift in Sources */,
 				BDFC927F2281B71300D0370C /* TaskEditReactorSpec.swift in Sources */,
+				BD0961E32282EFA900B666A2 /* RxTestDispatcherSchedulers.swift in Sources */,
 				BD31119F227DEA8700FB8217 /* TaskServiceSpec.swift in Sources */,
 				BDE9CC22227B2EC400191DB9 /* GeneratedMocks.swift in Sources */,
 				BD31116C227D99E800FB8217 /* Date+Day.swift in Sources */,

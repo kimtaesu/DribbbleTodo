@@ -10,6 +10,7 @@
 "ui_alert_ok_title" = "확인";
 "ui_alert_cancel_title" = "취소";
 "error_google_sign_in" = "로그인을 할 수 없습니다.\n%@";
+"error_create_task" = "Task를 생성할 수 없습니다.\n%@";
 
 "ui_alert_empty_contents" = "컨텐츠가 비어있습니다. 그래도 저장하시겠습니까?";
 

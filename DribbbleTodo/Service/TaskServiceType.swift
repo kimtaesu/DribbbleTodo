@@ -15,5 +15,5 @@ protocol TaskServiceType {
     
     func fetchTasks() -> Observable<[Task]>
     @discardableResult
-    func addTasks(_ tasks: [Task]) -> Observable<Result<[Task], Error>>
+    func addTask(_ tasks: Task) -> Observable<Result<Task, Error>>
 }

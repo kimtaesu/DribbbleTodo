@@ -20,8 +20,8 @@ class TaskEditReactor: Reactor {
     }
 
     enum Action {
-        case setTitle(String)
-        case setDesc(String)
+        case setTitle(String?)
+        case setDesc(String?)
         case clicksDone
         case saveTasks
     }
@@ -29,18 +29,19 @@ class TaskEditReactor: Reactor {
         var title: String
         var desc: String
 
-        var emptyContentAlertView: UIAlertComponent?
-        var done: Bool?
-
+        var alertView: UIAlertComponent?
+        var doneTask: Task?
+        
         public init(title: String, desc: String) {
             self.title = title
             self.desc = desc
         }
     }
     enum Mutation {
-        case setTitle(String)
-        case setDesc(String)
-        case setDone
+        case setTitle(String?)
+        case setDesc(String?)
+        case setDone(Task)
+        case setError(Error)
         case setShowEmptyContents
     }
     func mutate(action: Action) -> Observable<Mutation> {
@@ -54,7 +55,13 @@ class TaskEditReactor: Reactor {
                 $0.title = currentState.title
                 $0.desc = currentState.desc
             }
-            return self.taskService.addTasks([task]).map { _ in Mutation.setDone }
+            return self.taskService.addTask(task).map { result in
+                do {
+                    return Mutation.setDone(try result.get())
+                } catch let e {
+                    return Mutation.setError(e)
+                }
+            }
         case .clicksDone:
             if currentState.title.isEmpty && currentState.desc.isEmpty {
                 return .just(.setShowEmptyContents)
@@ -65,16 +72,16 @@ class TaskEditReactor: Reactor {
     }
     func reduce(state: State, mutation: Mutation) -> State {
         var newState = state
-        newState.emptyContentAlertView = nil
-        newState.done = false
+        newState.alertView = nil
+        newState.doneTask = nil
 
         switch mutation {
         case .setTitle(let title):
-            newState.title = title
+            newState.title = title ?? ""
         case .setDesc(let desc):
-            newState.desc = desc
+            newState.desc = desc ?? ""
         case .setShowEmptyContents:
-            newState.emptyContentAlertView = UIAlertComponent(
+            newState.alertView = UIAlertComponent(
                 title: L10n.uiAlertNoticeTitle,
                 message: L10n.uiAlertEmptyContents,
                 actions: [
@@ -84,8 +91,13 @@ class TaskEditReactor: Reactor {
                     })
                 ]
             )
-        case .setDone:
-            newState.done = true
+        case .setError(let error):
+            newState.alertView = UIAlertComponent(
+                title: L10n.uiAlertWarningTitle,
+                message: L10n.errorCreateTask(error.localizedDescription)
+            )
+        case let .setDone(task):
+            newState.doneTask = task
         }
         return newState
     }

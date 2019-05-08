@@ -22,22 +22,20 @@ extension MockTaskServiceType {
     }()
     
     func mockSample(mock: MockTaskServiceType? = nil) -> MockTaskServiceType {
-        let mock = mock ?? self
-        stub(mock) { mock in
+        stub(self) { mock in
             when(mock.fetchTasks()).then {
                 return Observable.just(MockTaskServiceType.sampleTasks)
             }
         }
-        return mock
+        return self
     }
     
-    func mockAddTasks(mock: MockTaskServiceType? = nil) -> MockTaskServiceType {
-        let mock = mock ?? self
-        stub(mock, block: { mock in
-            mock.addTasks(any()).then({ tasks in
-                Observable.just(Result.success(tasks))
+    func mockAddTasks() -> MockTaskServiceType {
+        stub(self, block: { mock in
+            mock.addTask(any()).then({ task in
+                Observable.just(Result.success(task))
             })
         })
-        return mock
+        return self
     }
 }

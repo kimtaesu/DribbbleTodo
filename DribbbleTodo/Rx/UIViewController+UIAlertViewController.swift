@@ -13,12 +13,9 @@ import RxSwift
 extension Reactive where Base: UIViewController {
     var presentUIAlert: Binder<UIAlertComponent> {
         return Binder(self.base) { vc, uiAlert in
-            let alertController = UIAlertController().then {
-                $0.title = uiAlert.title
-                $0.message = uiAlert.message
-                uiAlert.actions.forEach{ action in
-                    UIAlertAction.init(title: action.title, style: action.style, handler: action.action)
-                }
+            let alertController = UIAlertController(title: uiAlert.title, message: uiAlert.message, preferredStyle: .alert)
+            uiAlert.actions.forEach { action in
+                alertController.addAction(UIAlertAction(title: action.title, style: action.style, handler: action.action))
             }
             vc.present(alertController, animated: true)
         }

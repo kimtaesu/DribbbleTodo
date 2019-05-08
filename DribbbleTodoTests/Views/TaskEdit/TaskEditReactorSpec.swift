@@ -52,13 +52,17 @@ class TaskEditReactorSpec: QuickSpec {
                         next(300, "zxc"),
                         ])
                 }
-                rxRxpect.assert(reactor.state.map { $0.done }) { events in
+                let expectTask: Task? = Task().then {
+                    $0.title = "abc"
+                    $0.desc = "zxc"
+                }
+                rxRxpect.assert(reactor.state.map { $0.doneTask }) { events in
                     XCTAssertEqual(events, [
                         next(0, nil),
-                        next(100, false),
-                        next(100, false),
-                        next(200, false),
-                        next(300, true),
+                        next(100, nil),
+                        next(100, nil),
+                        next(200, nil),
+                        next(300, expectTask)
                         ])
                 }
             }
@@ -80,7 +84,7 @@ class TaskEditReactorSpec: QuickSpec {
                         UIAlertActionComponent(title: L10n.uiAlertOkTitle, action: okAction)
                     ]
                 )
-                rxRxpect.assert(reactor.state.map { $0.emptyContentAlertView }) { events in
+                rxRxpect.assert(reactor.state.map { $0.alertView }) { events in
                     XCTAssertEqual(events, [
                         next(0, nil),
                         next(100, Optional(expectAlert))
@@ -88,8 +92,8 @@ class TaskEditReactorSpec: QuickSpec {
                 }
                 // when clicks an ok button
                 okAction(UIAlertAction())
-                rxRxpect.assert(reactor.state.map { $0.done }) { events in
-                    XCTAssertEqual(events[0], next(0, true))
+                rxRxpect.assert(reactor.state.map { $0.doneTask }) { events in
+                    XCTAssertEqual(events[0], next(0, Task()))
                 }
             }
         }

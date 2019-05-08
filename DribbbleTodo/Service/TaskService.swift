@@ -21,7 +21,7 @@ class TaskService: TaskServiceType {
         return Observable.just(Array(self.realm.objects(Task.self)))
     }
 
-    func addTasks(_ tasks: [Task]) -> Observable<Result<[Task], Error>> {
+    func addTask(_ tasks: Task) -> Observable<Result<Task, Error>> {
         do {
             try realm.write {
                 self.realm.add(tasks)

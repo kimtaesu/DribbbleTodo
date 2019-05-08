@@ -9,6 +9,7 @@
 import Foundation
 import ReactorKit
 import RxDataSources
+import Swinject
 import UIKit
 
 class TaskListViewController: UIViewController {
@@ -26,6 +27,7 @@ class TaskListViewController: UIViewController {
         let button = UIButton()
         return button
     }()
+    
     
     let dataSource = RxCollectionViewSectionedAnimatedDataSource<TaskSection>(
         configureCell: { ds, cv, ip, item in
@@ -65,7 +67,11 @@ class TaskListViewController: UIViewController {
     }
     @objc
     func showEditViewController() {
-        self.show(TaskEditViewController(), sender: nil)
+        let reactor = taskEditContainer.resolve(TaskEditReactor.self)!
+        let schedulers = taskEditContainer.resolve(RxDispatcherSchedulers.self)!
+        self.show(TaskEditViewController(reactor: reactor, schedulers: schedulers, taskCompletion: { task in
+            
+        }), sender: nil)
     }
 }
 

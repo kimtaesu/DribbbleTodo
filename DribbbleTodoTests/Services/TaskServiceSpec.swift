@@ -15,24 +15,27 @@ import RxTest
 class TaskServiceSpec: QuickSpec {
     override func spec() {
         
+        let tasks = [
+            Task.random(),
+            Task.random()
+        ]
+        
+        var service: TaskServiceType!
+        beforeEach {
+            let realm = try! Realm()
+            service = TaskService(realm)
+        }
+        
         describe("A TaskService") {
-            var service: TaskServiceType!
-            
-            beforeEach {
-                let realm = try! Realm()
-                service = TaskService(realm)
-            }
             it("fetch a tasks before adding a tasks") {
-                let tasks = [
-                    Task.random(),
-                    Task.random()
-                ]
-                service.addTasks(tasks)
+                service.addTask(tasks[0])
+                service.addTask(tasks[1])
                 
                 let actual = try! service.fetchTasks().toBlocking().last()
                 expect(actual) == tasks
             }
         }
+        
     }
 }
 

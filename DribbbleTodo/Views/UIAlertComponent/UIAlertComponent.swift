@@ -28,10 +28,17 @@ struct UIAlertActionComponent: Equatable {
 struct UIAlertComponent: Equatable {
     let title: String?
     let message: String?
-    var actions: [UIAlertActionComponent]
+    let style: UIAlertController.Style
+    let actions: [UIAlertActionComponent]
 
-    public init(title: String?, message: String?, actions: [UIAlertActionComponent] = [UIAlertActionComponent(title: L10n.uiAlertOkTitle, action: nil)]) {
+    public init(
+        title: String?,
+        message: String?,
+        style: UIAlertController.Style = .alert,
+        actions: [UIAlertActionComponent] = [UIAlertActionComponent(title: L10n.uiAlertOkTitle, action: nil)]
+    ) {
         self.title = title
+        self.style = style
         self.message = message
         self.actions = actions
     }

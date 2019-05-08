@@ -15,5 +15,8 @@ let rootContainer: Container = {
     container.register(TaskServiceType.self, factory: { _, realm in
         return TaskService(realm)
     })
+    container.register(RxDispatcherSchedulers.self, factory: { _ in
+        return RxDispatcherSchedulers()
+    })
     return container
 }()
