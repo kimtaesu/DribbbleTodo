@@ -7,13 +7,14 @@
 //
 
 import Foundation
-import UIKit
 import ReactorKit
+import UIKit
 
 class SplashViewController: UIViewController {
     
     struct Dependency {
         let reactor: SplashReactor
+        let presentLogin: () -> Void
         let presnetMain: () -> Void
     }
     
@@ -31,11 +32,28 @@ class SplashViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
 }
 
 extension SplashViewController: View, HasDisposeBag {
     func bind(reactor: SplashReactor) {
+        self.rx.viewDidAppear
+            .map { _ in Reactor.Action.checkIfAuthenticated }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
         
+        reactor.state.map { $0.authenticated }
+            .filterNil()
+            .distinctUntilChanged()
+            .bind { [weak self] isAuthenticated in
+                guard let self = self else { return }
+                if isAuthenticated {
+                    self.dependency.presnetMain()
+                } else {
+                    self.dependency.presentLogin()
+                }
+            }
+            .disposed(by: disposeBag)
     }
 }

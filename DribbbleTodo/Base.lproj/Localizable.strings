@@ -5,23 +5,17 @@
   Created by tskim on 30/03/2019.
   Copyright © 2019 hucet. All rights reserved.
 */
-"interesting_section_header" = "Interestings";
-"recent_section_header" = "Recents";
-"hero_image_id" = "image_%d_%d";
-"license_count" = "License: %@";
+"ui_alert_warning_title" = "경고";
+"ui_alert_notice_title" = "알림";
+"ui_alert_ok_title" = "확인";
+"ui_alert_cancel_title" = "취소";
+"error_google_sign_in" = "로그인을 할 수 없습니다.\n%@";
+"error_create_task" = "Task를 생성할 수 없습니다.\n%@";
 
-"geo_search_options_text_title" = "Text";
-"geo_search_options_text_message" = "키워드 검색";
+"ui_alert_empty_contents" = "텍스트가 비어있습니다. 최소 길이(1)를 입력해야 합니다.";
+"ui_alert_delete_contents" = "정말 삭제하시겠습니까?";
 
-"geo_search_options_location_title" = "Location";
-"geo_search_options_location_message" = "지역, 시, 주, 우편번호";
+"task_title_placeholder" = "What will you do?";
+"task_descriptions_placeholder" = "Descriptions";
 
-"geo_search_options_title_hero_id" = "geo_search_options_title_hero_id_%@";
-"geo_search_options_message_hero_id" = "geo_search_options_title_hero_id_%@";
-"geo_search_options_image_hero_id" = "geo_search_options_image_hero_id_%@";
-
-"title_done" = "Done";
-"title_retry" = "재시도";
-"title_search" = "Search";
-"date_format_at_photo_taken" = "yyyy년 MM월 dd일에 촬영";
-"date_format_arg_at_photo_taken" = "%@년 %@월 %@일에 촬영";
+"hero_task_title_id" = "hero_task_title_%@";
