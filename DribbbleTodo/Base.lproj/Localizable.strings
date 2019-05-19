@@ -14,5 +14,5 @@
 
 "ui_alert_empty_contents" = "컨텐츠가 비어있습니다. 그래도 저장하시겠습니까?";
 
-"task_title_placeholder" = "Title";
+"task_title_placeholder" = "What will you do?";
 "task_descriptions_placeholder" = "Descriptions";

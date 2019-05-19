@@ -30,7 +30,6 @@ class TaskEditReactorSpec: QuickSpec {
                 rxRxpect.input(reactor.action, [
                     next(100, .setTitle("a")),
                     next(100, .setTitle("abc")),
-                    next(200, .setDesc("zxc")),
                     next(300, .clicksDone),
                     ])
                 
@@ -39,29 +38,17 @@ class TaskEditReactorSpec: QuickSpec {
                         next(0, ""),
                         next(100, "a"),
                         next(100, "abc"),
-                        next(200, "abc"),
                         next(300, "abc"),
-                        ])
-                }
-                rxRxpect.assert(reactor.state.map { $0.desc }) { events in
-                    XCTAssertEqual(events, [
-                        next(0, ""),
-                        next(100, ""),
-                        next(100, ""),
-                        next(200, "zxc"),
-                        next(300, "zxc"),
                         ])
                 }
                 let expectTask: Task? = Task().then {
                     $0.title = "abc"
-                    $0.desc = "zxc"
                 }
                 rxRxpect.assert(reactor.state.map { $0.doneTask }) { events in
                     XCTAssertEqual(events, [
                         next(0, nil),
                         next(100, nil),
                         next(100, nil),
-                        next(200, nil),
                         next(300, expectTask)
                         ])
                 }

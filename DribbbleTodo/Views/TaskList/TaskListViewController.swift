@@ -13,27 +13,23 @@ import Swinject
 import UIKit
 
 class TaskListViewController: UIViewController {
-    
+
     let taskCollectionView: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
         collectionView.register(TaskViewCell.self, forCellWithReuseIdentifier: TaskViewCell.swiftIdentifier)
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 10, bottom: 10, right: 0)
         collectionView.backgroundColor = .clear
         return collectionView
     }()
 
-    let newTaskButton: UIButton = {
-        let button = UIButton()
-        return button
-    }()
-    
     let dataSource = RxCollectionViewSectionedAnimatedDataSource<TaskSection>(
         configureCell: { ds, cv, ip, item in
             guard let cell = cv.dequeueReusableCell(withReuseIdentifier: TaskViewCell.swiftIdentifier, for: ip) as? TaskViewCell else {
                 return UICollectionViewCell()
             }
-            cell.reactor = TaskViewCellReactor(item)
+            cell.titleView.text = item.title
             return cell
         }
     )
@@ -49,21 +45,16 @@ class TaskListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationItem.title = "Tasks"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: Asset.icAdd.image, style: .plain, target: self, action: #selector(showEditViewController))
         taskCollectionView.do {
             view.addSubview($0)
             $0.snp.makeConstraints {
                 $0.edges.equalToSuperview()
             }
         }
-        newTaskButton.do {
-            view.addSubview($0)
-            $0.addTarget(self, action: #selector(showEditViewController), for: .touchUpInside)
-            $0.setImage(Asset.icAdd.image.withRenderingMode(.alwaysTemplate), for: .normal)
-            $0.snp.actionRightBottom(self)
-            $0.apply(ViewStyle.floatingAction())
-        }
     }
+    
     @objc
     func showEditViewController() {
         let reactor = taskEditContainer.resolve(TaskEditReactor.self)!
@@ -93,6 +84,8 @@ extension TaskListViewController: View, HasDisposeBag {
 
 extension TaskListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: TaskViewCell.Metric.height)
+        let referenceHeight: CGFloat = TaskViewCell.Metric.height
+        let referenceWidth: CGFloat = view.frame.width
+        return CGSize(width: referenceWidth, height: referenceHeight)
     }
 }

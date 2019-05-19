@@ -11,7 +11,7 @@ import ReactorKit
 import RxSwift
 
 class TaskEditReactor: Reactor {
-    let initialState: State = State(title: "", desc: "")
+    let initialState: State = State(title: "")
 
     let taskService: TaskServiceType
 
@@ -21,25 +21,21 @@ class TaskEditReactor: Reactor {
 
     enum Action {
         case setTitle(String?)
-        case setDesc(String?)
         case clicksDone
         case saveTasks
     }
     struct State {
         var title: String
-        var desc: String
 
         var alertView: UIAlertComponent?
         var doneTask: Task?
         
-        public init(title: String, desc: String) {
+        public init(title: String) {
             self.title = title
-            self.desc = desc
         }
     }
     enum Mutation {
         case setTitle(String?)
-        case setDesc(String?)
         case setDone(Task)
         case setError(Error)
         case setShowEmptyContents
@@ -48,12 +44,9 @@ class TaskEditReactor: Reactor {
         switch action {
         case .setTitle(let title):
             return .just(.setTitle(title))
-        case .setDesc(let desc):
-            return .just(.setDesc(desc))
         case .saveTasks:
             let task = Task().then {
                 $0.title = currentState.title
-                $0.desc = currentState.desc
             }
             return self.taskService.addTask(task).map { result in
                 do {
@@ -63,7 +56,7 @@ class TaskEditReactor: Reactor {
                 }
             }
         case .clicksDone:
-            if currentState.title.isEmpty && currentState.desc.isEmpty {
+            if currentState.title.isEmpty {
                 return .just(.setShowEmptyContents)
             } else {
                 return mutate(action: .saveTasks)
@@ -78,8 +71,6 @@ class TaskEditReactor: Reactor {
         switch mutation {
         case .setTitle(let title):
             newState.title = title ?? ""
-        case .setDesc(let desc):
-            newState.desc = desc ?? ""
         case .setShowEmptyContents:
             newState.alertView = UIAlertComponent(
                 title: L10n.uiAlertNoticeTitle,

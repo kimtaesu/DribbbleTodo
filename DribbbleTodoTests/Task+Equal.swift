@@ -13,6 +13,6 @@ extension Task {
         guard let object = object as? Task else {
             return false
         }
-        return self.desc == object.desc && self.desc == object.desc && self.isDone == object.isDone
+        return self.title == object.title && self.isDone == object.isDone
     }
 }

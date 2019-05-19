@@ -13,7 +13,6 @@ extension Task {
     class func random() -> Task {
         return Task().then {
             $0.title = randomText(length: 5)
-            $0.desc = randomText(length: 7)
         }
     }
 }

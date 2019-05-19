@@ -7,6 +7,7 @@
 //
 
 import GoogleSignIn
+import RealmSwift
 import UIKit
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
+        printEmulatorInfo()
         self.appDependency = self.appDependency ?? CompositionRoot.resolve()
         self.window = self.appDependency.window
         self.appDependency.configureSDKs()
@@ -31,5 +33,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         options: [UIApplication.OpenURLOptionsKey: Any]
     ) -> Bool {
         return self.appDependency.openURL(url, options)
+    }
+}
+
+extension AppDelegate {
+    func printEmulatorInfo() {
+        logger.debug("Library: \(FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask).first!.path)")
+        logger.debug("Realm: \(String(describing: Realm.Configuration.defaultConfiguration.fileURL))")
     }
 }

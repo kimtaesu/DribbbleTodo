@@ -12,7 +12,6 @@ import RealmSwift
 class Task: Object, Encodable {
     @objc dynamic var id = UUID().uuidString
     @objc dynamic var title = ""
-    @objc dynamic var desc = ""
     @objc dynamic var isDone = false
     @objc dynamic var createdAt = Date()
 

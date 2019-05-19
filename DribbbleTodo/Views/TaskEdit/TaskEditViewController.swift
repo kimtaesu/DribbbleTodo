@@ -13,12 +13,11 @@ import UIKit
 
 class TaskEditViewController: UIViewController {
 
-    let titleTextField = UITextField()
-    let descView = DescriptionView()
-    let doneButton = UIButton()
+    let titleTextField = UITextView()
     let scheduler: RxDispatcherSchedulersType
     var taskCompletion: ((Task) -> Void)?
-
+    let doneButton = UIBarButtonItem(image: Asset.icDone.image, style: .plain, target: nil, action: nil)
+    
     struct Metric {
         static let descHeight: CGFloat = 100
     }
@@ -40,50 +39,32 @@ class TaskEditViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Edit"
+        navigationItem.rightBarButtonItem = doneButton
         titleTextField.do {
+            $0.becomeFirstResponder()
             view.addSubview($0)
-            $0.textColor = ColorName.taskEditTextColor
-            $0.placeholder = L10n.taskTitlePlaceholder
+            $0.backgroundColor = ColorName.bgEditTitle
             $0.snp.makeConstraints {
-                $0.leading.equalTo(safeAreaLeading)
-                $0.trailing.equalTo(safeAreaTrailing)
-                $0.top.equalTo(safeAreaTop)
+                $0.leading.equalTo(safeAreaLeading).inset(20)
+                $0.trailing.equalTo(safeAreaTrailing).inset(20)
+                $0.top.equalTo(safeAreaTop).inset(20)
+                $0.bottom.equalTo(safeAreaBottom).inset(20)
             }
-        }
-        descView.do {
-            view.addSubview($0)
-            $0.snp.makeConstraints {
-                $0.leading.equalTo(titleTextField.snp.leading)
-                $0.trailing.equalTo(titleTextField.snp.trailing)
-                $0.top.equalTo(titleTextField.snp.bottom)
-                $0.height.equalTo(Metric.descHeight)
-            }
-        }
-        doneButton.do {
-            view.addSubview($0)
-            $0.setImage(Asset.icDone.image.withRenderingMode(.alwaysTemplate), for: .normal)
-            $0.snp.actionRightBottom(self)
-            $0.apply(ViewStyle.floatingAction())
         }
     }
 }
 
 extension TaskEditViewController: View, HasDisposeBag {
     func bind(reactor: TaskEditReactor) {
-        descView.descTextView.rx.text
-            .throttle(500, scheduler: self.scheduler.main)
-            .map { Reactor.Action.setDesc($0) }
-            .bind(to: reactor.action)
-            .disposed(by: disposeBag)
-
-        titleTextField.rx.text
-            .throttle(500, scheduler: self.scheduler.main)
-            .map { Reactor.Action.setTitle($0) }
-            .bind(to: reactor.action)
-            .disposed(by: disposeBag)
-
         doneButton.rx.tap
             .map { Reactor.Action.clicksDone }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        titleTextField.rx.text
+            .throttle(0.5, scheduler: self.scheduler.main)
+            .map { Reactor.Action.setTitle($0) }
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
 

@@ -19,12 +19,6 @@
 		BD311153227D7B4A00FB8217 /* UIViewController+UIAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD311152227D7B4A00FB8217 /* UIViewController+UIAlertViewController.swift */; };
 		BD311156227D820600FB8217 /* TaskEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD311155227D820600FB8217 /* TaskEditViewController.swift */; };
 		BD311158227D820F00FB8217 /* TaskEditReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD311157227D820F00FB8217 /* TaskEditReactor.swift */; };
-		BD311160227D848000FB8217 /* DateDaySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD31115F227D848000FB8217 /* DateDaySpec.swift */; };
-		BD311162227D94A100FB8217 /* DayOfWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD311161227D94A100FB8217 /* DayOfWeek.swift */; };
-		BD311164227D94AF00FB8217 /* DateDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD311163227D94AF00FB8217 /* DateDay.swift */; };
-		BD311166227D96D300FB8217 /* CalendarWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD311165227D96D300FB8217 /* CalendarWeekView.swift */; };
-		BD311168227D989D00FB8217 /* CalendarWeekReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD311167227D989D00FB8217 /* CalendarWeekReactor.swift */; };
-		BD31116A227D98E600FB8217 /* CalendarWeekReactorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD311169227D98E600FB8217 /* CalendarWeekReactorSpec.swift */; };
 		BD31116C227D99E800FB8217 /* Date+Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD31116B227D99E800FB8217 /* Date+Day.swift */; };
 		BD311170227DBE4E00FB8217 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD31116F227DBE4E00FB8217 /* Task.swift */; };
 		BD311172227DC10B00FB8217 /* Encodable+Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD311171227DC10B00FB8217 /* Encodable+Dictionary.swift */; };
@@ -32,9 +26,6 @@
 		BD311178227DCB3F00FB8217 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD311177227DCB3F00FB8217 /* TaskViewModel.swift */; };
 		BD31117A227DCCF600FB8217 /* TaskViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD311179227DCCF600FB8217 /* TaskViewCell.swift */; };
 		BD31117C227DCD3200FB8217 /* SwiftNameIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD31117B227DCD3200FB8217 /* SwiftNameIdentifier.swift */; };
-		BD31117E227DCE6800FB8217 /* TaskViewCellReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD31117D227DCE6800FB8217 /* TaskViewCellReactor.swift */; };
-		BD311180227DD0E700FB8217 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD31117F227DD0E700FB8217 /* CheckBox.swift */; };
-		BD311182227DD29300FB8217 /* TaskViewCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD311181227DD29300FB8217 /* TaskViewCellSpec.swift */; };
 		BD311184227DD4C200FB8217 /* RealmConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD311183227DD4C200FB8217 /* RealmConfiguration.swift */; };
 		BD311187227DD61A00FB8217 /* TaskListViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD311186227DD61A00FB8217 /* TaskListViewControllerSpec.swift */; };
 		BD311189227DD74A00FB8217 /* TaskServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD311188227DD74A00FB8217 /* TaskServiceType.swift */; };
@@ -47,7 +38,6 @@
 		BD3111AA227E72E200FB8217 /* UICollectionView+Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3111A9227E72E200FB8217 /* UICollectionView+Cell.swift */; };
 		BD3111AC227E767300FB8217 /* TaskEditContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3111AB227E767300FB8217 /* TaskEditContainer.swift */; };
 		BD3111AE227E76B700FB8217 /* RootContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3111AD227E76B700FB8217 /* RootContainer.swift */; };
-		BD3111B0227E77CA00FB8217 /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3111AF227E77CA00FB8217 /* DescriptionView.swift */; };
 		BD3111B3227E79DD00FB8217 /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3111B2227E79DD00FB8217 /* XibView.swift */; };
 		BD3111B5227E79F000FB8217 /* UIView+Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3111B4227E79F000FB8217 /* UIView+Blur.swift */; };
 		BD3111B7227E79FB00FB8217 /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3111B6227E79FB00FB8217 /* UIColor+Random.swift */; };
@@ -81,11 +71,6 @@
 		BD784109227B03C0001E5DEE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD784108227B03C0001E5DEE /* main.swift */; };
 		BD78410B227B04CB001E5DEE /* StubAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD78410A227B04CB001E5DEE /* StubAppDelegate.swift */; };
 		BD78410D227B04F2001E5DEE /* TestConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD78410C227B04F2001E5DEE /* TestConfiguration.swift */; };
-		BDA777DB228312EA00067F48 /* CarlendarDayOfWeekSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA777DA228312EA00067F48 /* CarlendarDayOfWeekSection.swift */; };
-		BDA777DF228318E100067F48 /* CalendarHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA777DE228318E100067F48 /* CalendarHeader.swift */; };
-		BDA777E122831A9100067F48 /* CalendarDayOfWeekViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA777E022831A9100067F48 /* CalendarDayOfWeekViewModel.swift */; };
-		BDA777E322831ABC00067F48 /* CalendarDayOfWeekCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA777E222831ABC00067F48 /* CalendarDayOfWeekCell.swift */; };
-		BDA777E522831AE800067F48 /* CalendarDayOfWeekReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA777E422831AE800067F48 /* CalendarDayOfWeekReactor.swift */; };
 		BDE1BDA4227D3C5900BE2419 /* LoginReactorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE1BDA3227D3C5900BE2419 /* LoginReactorSpec.swift */; };
 		BDE1BDAB227D48DA00BE2419 /* LoginViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE1BDAA227D48DA00BE2419 /* LoginViewControllerSpec.swift */; };
 		BDE1BDBA227D509400BE2419 /* GoogleService-Info-Test.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDE1BDB8227D509300BE2419 /* GoogleService-Info-Test.plist */; };
@@ -141,12 +126,6 @@
 		BD311152227D7B4A00FB8217 /* UIViewController+UIAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIAlertViewController.swift"; sourceTree = "<group>"; };
 		BD311155227D820600FB8217 /* TaskEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditViewController.swift; sourceTree = "<group>"; };
 		BD311157227D820F00FB8217 /* TaskEditReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditReactor.swift; sourceTree = "<group>"; };
-		BD31115F227D848000FB8217 /* DateDaySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDaySpec.swift; sourceTree = "<group>"; };
-		BD311161227D94A100FB8217 /* DayOfWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayOfWeek.swift; sourceTree = "<group>"; };
-		BD311163227D94AF00FB8217 /* DateDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDay.swift; sourceTree = "<group>"; };
-		BD311165227D96D300FB8217 /* CalendarWeekView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarWeekView.swift; sourceTree = "<group>"; };
-		BD311167227D989D00FB8217 /* CalendarWeekReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarWeekReactor.swift; sourceTree = "<group>"; };
-		BD311169227D98E600FB8217 /* CalendarWeekReactorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarWeekReactorSpec.swift; sourceTree = "<group>"; };
 		BD31116B227D99E800FB8217 /* Date+Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Day.swift"; sourceTree = "<group>"; };
 		BD31116F227DBE4E00FB8217 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		BD311171227DC10B00FB8217 /* Encodable+Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Dictionary.swift"; sourceTree = "<group>"; };
@@ -154,9 +133,6 @@
 		BD311177227DCB3F00FB8217 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
 		BD311179227DCCF600FB8217 /* TaskViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewCell.swift; sourceTree = "<group>"; };
 		BD31117B227DCD3200FB8217 /* SwiftNameIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNameIdentifier.swift; sourceTree = "<group>"; };
-		BD31117D227DCE6800FB8217 /* TaskViewCellReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewCellReactor.swift; sourceTree = "<group>"; };
-		BD31117F227DD0E700FB8217 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
-		BD311181227DD29300FB8217 /* TaskViewCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewCellSpec.swift; sourceTree = "<group>"; };
 		BD311183227DD4C200FB8217 /* RealmConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmConfiguration.swift; sourceTree = "<group>"; };
 		BD311186227DD61A00FB8217 /* TaskListViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewControllerSpec.swift; sourceTree = "<group>"; };
 		BD311188227DD74A00FB8217 /* TaskServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskServiceType.swift; sourceTree = "<group>"; };
@@ -171,7 +147,6 @@
 		BD3111A9227E72E200FB8217 /* UICollectionView+Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Cell.swift"; sourceTree = "<group>"; };
 		BD3111AB227E767300FB8217 /* TaskEditContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditContainer.swift; sourceTree = "<group>"; };
 		BD3111AD227E76B700FB8217 /* RootContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootContainer.swift; sourceTree = "<group>"; };
-		BD3111AF227E77CA00FB8217 /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
 		BD3111B2227E79DD00FB8217 /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
 		BD3111B4227E79F000FB8217 /* UIView+Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Blur.swift"; sourceTree = "<group>"; };
 		BD3111B6227E79FB00FB8217 /* UIColor+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
@@ -209,11 +184,7 @@
 		BD784108227B03C0001E5DEE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		BD78410A227B04CB001E5DEE /* StubAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubAppDelegate.swift; sourceTree = "<group>"; };
 		BD78410C227B04F2001E5DEE /* TestConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConfiguration.swift; sourceTree = "<group>"; };
-		BDA777DA228312EA00067F48 /* CarlendarDayOfWeekSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarlendarDayOfWeekSection.swift; sourceTree = "<group>"; };
-		BDA777DE228318E100067F48 /* CalendarHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHeader.swift; sourceTree = "<group>"; };
-		BDA777E022831A9100067F48 /* CalendarDayOfWeekViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarDayOfWeekViewModel.swift; sourceTree = "<group>"; };
-		BDA777E222831ABC00067F48 /* CalendarDayOfWeekCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarDayOfWeekCell.swift; sourceTree = "<group>"; };
-		BDA777E422831AE800067F48 /* CalendarDayOfWeekReactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarDayOfWeekReactor.swift; sourceTree = "<group>"; };
+		BDA777E62283201500067F48 /* TylerCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TylerCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDE1BDA3227D3C5900BE2419 /* LoginReactorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginReactorSpec.swift; sourceTree = "<group>"; };
 		BDE1BDAA227D48DA00BE2419 /* LoginViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerSpec.swift; sourceTree = "<group>"; };
 		BDE1BDB8227D509300BE2419 /* GoogleService-Info-Test.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Test.plist"; sourceTree = "<group>"; };
@@ -279,6 +250,7 @@
 		8293093A5A994822B4C15788 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BDA777E62283201500067F48 /* TylerCalendar.framework */,
 				BD311194227DDD0C00FB8217 /* RxRealm.framework */,
 				BD31118C227DDA9F00FB8217 /* RxRealm.framework */,
 				BDE9CC24227B2F9400191DB9 /* Cuckoo.framework */,
@@ -309,32 +281,13 @@
 				BD311155227D820600FB8217 /* TaskEditViewController.swift */,
 				BD311157227D820F00FB8217 /* TaskEditReactor.swift */,
 				BD3111AB227E767300FB8217 /* TaskEditContainer.swift */,
-				BD3111AF227E77CA00FB8217 /* DescriptionView.swift */,
 			);
 			path = TaskEdit;
-			sourceTree = "<group>";
-		};
-		BD311159227D826100FB8217 /* CalendarWeek */ = {
-			isa = PBXGroup;
-			children = (
-				BDA777E422831AE800067F48 /* CalendarDayOfWeekReactor.swift */,
-				BDA777E222831ABC00067F48 /* CalendarDayOfWeekCell.swift */,
-				BDA777E022831A9100067F48 /* CalendarDayOfWeekViewModel.swift */,
-				BD311165227D96D300FB8217 /* CalendarWeekView.swift */,
-				BD311161227D94A100FB8217 /* DayOfWeek.swift */,
-				BD311163227D94AF00FB8217 /* DateDay.swift */,
-				BD311167227D989D00FB8217 /* CalendarWeekReactor.swift */,
-				BDA777DA228312EA00067F48 /* CarlendarDayOfWeekSection.swift */,
-				BDA777DE228318E100067F48 /* CalendarHeader.swift */,
-			);
-			path = CalendarWeek;
 			sourceTree = "<group>";
 		};
 		BD31115E227D847A00FB8217 /* Date */ = {
 			isa = PBXGroup;
 			children = (
-				BD31115F227D848000FB8217 /* DateDaySpec.swift */,
-				BD311169227D98E600FB8217 /* CalendarWeekReactorSpec.swift */,
 			);
 			path = Date;
 			sourceTree = "<group>";
@@ -488,13 +441,11 @@
 				BDFC927A2281B1C000D0370C /* Layout */,
 				BDFC92732281ABA600D0370C /* Styles */,
 				BD3111B1227E79D600FB8217 /* Common */,
-				BD311159227D826100FB8217 /* CalendarWeek */,
 				BD311154227D81E700FB8217 /* TaskEdit */,
 				BDE9CC14227B2B6100191DB9 /* Login */,
 				BD784105227B02D3001E5DEE /* TaskList */,
 				BD784104227B02CB001E5DEE /* Splash */,
 				BDE9CC12227B29C300191DB9 /* UIViewController+Rx.swift */,
-				BD31117F227DD0E700FB8217 /* CheckBox.swift */,
 				BDFC92782281AC2A00D0370C /* UIViewController+SafeArea.swift */,
 			);
 			path = Views;
@@ -517,7 +468,6 @@
 				BDE9CC10227B295800191DB9 /* TaskListReactor.swift */,
 				BD311177227DCB3F00FB8217 /* TaskViewModel.swift */,
 				BD311179227DCCF600FB8217 /* TaskViewCell.swift */,
-				BD31117D227DCE6800FB8217 /* TaskViewCellReactor.swift */,
 				BDFC928522825D5700D0370C /* TaskListContainer.swift */,
 			);
 			path = TaskList;
@@ -577,7 +527,6 @@
 				BDE1BDA2227D3C5100BE2419 /* Login */,
 				BDE9CC18227B2B9C00191DB9 /* Splash */,
 				BD31116B227D99E800FB8217 /* Date+Day.swift */,
-				BD311181227DD29300FB8217 /* TaskViewCellSpec.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1060,13 +1009,9 @@
 				BD3C9AE422792DD200E51A34 /* Fonts.swift in Sources */,
 				BD3111BB227E7A5000FB8217 /* RoundShadowView.swift in Sources */,
 				BD31117C227DCD3200FB8217 /* SwiftNameIdentifier.swift in Sources */,
-				BD31117E227DCE6800FB8217 /* TaskViewCellReactor.swift in Sources */,
 				BDFC92752281ABB800D0370C /* ViewStyle.swift in Sources */,
-				BD3111B0227E77CA00FB8217 /* DescriptionView.swift in Sources */,
 				BD3111B7227E79FB00FB8217 /* UIColor+Random.swift in Sources */,
-				BDA777E322831ABC00067F48 /* CalendarDayOfWeekCell.swift in Sources */,
 				BD3C9AA522792CF600E51A34 /* DribbbleTodo.xcdatamodeld in Sources */,
-				BDA777DF228318E100067F48 /* CalendarHeader.swift in Sources */,
 				BD784103227B02A6001E5DEE /* HasDisposeBag.swift in Sources */,
 				BD3C9AE522792DD200E51A34 /* Plist.swift in Sources */,
 				BD311176227DCB3100FB8217 /* TaskSection.swift in Sources */,
@@ -1074,8 +1019,6 @@
 				BD3C9AE322792DD200E51A34 /* MyColor.swift in Sources */,
 				BDFC92772281ABCE00D0370C /* ViewStyle+UIButton.swift in Sources */,
 				BD3111AE227E76B700FB8217 /* RootContainer.swift in Sources */,
-				BDA777E122831A9100067F48 /* CalendarDayOfWeekViewModel.swift in Sources */,
-				BD311168227D989D00FB8217 /* CalendarWeekReactor.swift in Sources */,
 				BDE9CC2C227B37A200191DB9 /* LoginReactor.swift in Sources */,
 				BD3111B5227E79F000FB8217 /* UIView+Blur.swift in Sources */,
 				BD311189227DD74A00FB8217 /* TaskServiceType.swift in Sources */,
@@ -1084,23 +1027,17 @@
 				BD3111B9227E7A0A00FB8217 /* UIView+Gradients.swift in Sources */,
 				BDE9CC13227B29C300191DB9 /* UIViewController+Rx.swift in Sources */,
 				BD784107227B02E4001E5DEE /* TaskListViewController.swift in Sources */,
-				BD311166227D96D300FB8217 /* CalendarWeekView.swift in Sources */,
 				BD784101227B0242001E5DEE /* Logger.swift in Sources */,
 				BD31117A227DCCF600FB8217 /* TaskViewCell.swift in Sources */,
 				BD311158227D820F00FB8217 /* TaskEditReactor.swift in Sources */,
-				BD311180227DD0E700FB8217 /* CheckBox.swift in Sources */,
 				BD3111AC227E767300FB8217 /* TaskEditContainer.swift in Sources */,
 				BDE9CC1D227B2C9400191DB9 /* UserServiceType.swift in Sources */,
-				BDA777E522831AE800067F48 /* CalendarDayOfWeekReactor.swift in Sources */,
 				BD3C9AE122792DD200E51A34 /* Assets.swift in Sources */,
-				BDA777DB228312EA00067F48 /* CarlendarDayOfWeekSection.swift in Sources */,
-				BD311162227D94A100FB8217 /* DayOfWeek.swift in Sources */,
 				BD311153227D7B4A00FB8217 /* UIViewController+UIAlertViewController.swift in Sources */,
 				BD311178227DCB3F00FB8217 /* TaskViewModel.swift in Sources */,
 				BD311148227D669F00FB8217 /* User+Map.swift in Sources */,
 				BD7840F4227B01A4001E5DEE /* CompositionRoot.swift in Sources */,
 				BDE9CC1F227B2CF200191DB9 /* UserService.swift in Sources */,
-				BD311164227D94AF00FB8217 /* DateDay.swift in Sources */,
 				BD3C9A9D22792CF600E51A34 /* AppDelegate.swift in Sources */,
 				BD311172227DC10B00FB8217 /* Encodable+Dictionary.swift in Sources */,
 				BD311146227D652200FB8217 /* Me.swift in Sources */,
@@ -1126,14 +1063,11 @@
 				BDE9CC27227B32BD00191DB9 /* SplashViewControllerSpec.swift in Sources */,
 				BD311143227D61A800FB8217 /* TestError.swift in Sources */,
 				BD78410D227B04F2001E5DEE /* TestConfiguration.swift in Sources */,
-				BD31116A227D98E600FB8217 /* CalendarWeekReactorSpec.swift in Sources */,
 				BDE1BDAB227D48DA00BE2419 /* LoginViewControllerSpec.swift in Sources */,
 				BD311184227DD4C200FB8217 /* RealmConfiguration.swift in Sources */,
 				BD311187227DD61A00FB8217 /* TaskListViewControllerSpec.swift in Sources */,
 				BDE9CC2A227B352100191DB9 /* StubUserService.swift in Sources */,
-				BD311160227D848000FB8217 /* DateDaySpec.swift in Sources */,
 				BD3C9AB522792CF800E51A34 /* DribbbleTodoTests.swift in Sources */,
-				BD311182227DD29300FB8217 /* TaskViewCellSpec.swift in Sources */,
 				BD3111A8227DF23F00FB8217 /* MockTaskServiceType+Mock.swift in Sources */,
 				BD3111A2227DEB4200FB8217 /* Task+Random.swift in Sources */,
 				BD3111A6227DF1D900FB8217 /* TaskListReactorSpec.swift in Sources */,

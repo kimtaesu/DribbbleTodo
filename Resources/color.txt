@@ -5,5 +5,5 @@ colorDark: 000063
 
 colorAccent: c62828
 
-bgDesc: f6f6f6
+bgEditTitle: f6f6f6
 taskEditTextColor: cccccc

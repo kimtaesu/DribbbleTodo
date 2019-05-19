@@ -45,18 +45,23 @@ class TaskEditViewControllerSpec: QuickSpec {
                         var actualTask: Task? = nil
                         let expectTask = Task().then {
                             $0.title = "title"
-                            $0.desc = "desc"
                         }
                         reactor.stub.state.value.title = expectTask.title
-                        reactor.stub.state.value.desc = expectTask.desc
                         viewController.taskCompletion = {
                             actualTask = $0
                         }
-                        viewController.doneButton.sendActions(for: .touchUpInside)
+                        viewController.doneButton.doAction()
                         expect(actualTask) == expectTask
                     }
                 }
             }
+        }
+    }
+}
+extension UIBarButtonItem {
+    func doAction() {
+        if let action = self.action {
+            UIApplication.shared.sendAction(action, to: self.target, from: nil, for: nil)
         }
     }
 }
