@@ -32,6 +32,7 @@ class TaskEditViewController: UIViewController {
         self.scheduler = scheduler
         self.taskCompletion = taskCompletion
         super.init(nibName: nil, bundle: nil)
+        self.titleTextField.text = reactor.currentState.editingTask.title
     }
 
     required init?(coder aDecoder: NSCoder) {

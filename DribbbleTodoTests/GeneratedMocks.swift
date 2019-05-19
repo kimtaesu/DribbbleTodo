@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: DribbbleTodo/Service/TaskServiceType.swift at 2019-05-19 14:15:16 +0000
+// MARK: - Mocks generated from file: DribbbleTodo/Service/TaskServiceType.swift at 2019-05-19 14:22:55 +0000
 
 //
 //  TaskServiceType.swift
@@ -222,7 +222,7 @@ import RxSwift
 }
 
 
-// MARK: - Mocks generated from file: DribbbleTodo/Service/UserServiceType.swift at 2019-05-19 14:15:16 +0000
+// MARK: - Mocks generated from file: DribbbleTodo/Service/UserServiceType.swift at 2019-05-19 14:22:55 +0000
 
 //
 //  UserService.swift

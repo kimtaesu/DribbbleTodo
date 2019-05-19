@@ -274,6 +274,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BD2099F122919EB20055DE88 /* Document */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Document;
+			sourceTree = "<group>";
+		};
 		BD311144227D651200FB8217 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -335,6 +342,7 @@
 		BD3C9A9022792CF600E51A34 = {
 			isa = PBXGroup;
 			children = (
+				BD2099F122919EB20055DE88 /* Document */,
 				BDE1BDBC227D509600BE2419 /* GoogleServices */,
 				BD3C9AEB22792EB500E51A34 /* swiftgen.yml */,
 				BD3C9ADA22792DD200E51A34 /* Generated */,
