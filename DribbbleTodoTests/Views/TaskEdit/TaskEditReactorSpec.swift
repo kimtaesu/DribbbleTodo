@@ -17,11 +17,8 @@ import Quick
 class TaskEditReactorSpec: QuickSpec {
     override func spec() {
         var reactor: TaskEditReactor!
-        var taskService: MockTaskServiceType!
         beforeEach {
-            taskService = MockTaskServiceType().mockAddTasks()
-            
-            reactor = TaskEditReactor(taskService)
+            reactor = TaskEditReactor(edit: EditingTask())
         }
         describe("A TaskEditReactorSpec") {
             it("save tasks") {
@@ -33,7 +30,7 @@ class TaskEditReactorSpec: QuickSpec {
                     next(300, .clicksDone),
                     ])
                 
-                rxRxpect.assert(reactor.state.map { $0.title }) { events in
+                rxRxpect.assert(reactor.state.map { $0.editingTask.title }) { events in
                     XCTAssertEqual(events, [
                         next(0, ""),
                         next(100, "a"),
@@ -41,10 +38,8 @@ class TaskEditReactorSpec: QuickSpec {
                         next(300, "abc"),
                         ])
                 }
-                let expectTask: Task? = Task().then {
-                    $0.title = "abc"
-                }
-                rxRxpect.assert(reactor.state.map { $0.doneTask }) { events in
+                let expectTask: EditingTask? = EditingTask(title: "abc")
+                rxRxpect.assert(reactor.state.map { $0.savedEditingTask }) { events in
                     XCTAssertEqual(events, [
                         next(0, nil),
                         next(100, nil),
@@ -53,22 +48,18 @@ class TaskEditReactorSpec: QuickSpec {
                         ])
                 }
             }
-            it("empty contents") {
+            it("shown empty contents") {
                 let rxRxpect = RxExpect()
                 rxRxpect.retain(reactor)
                 rxRxpect.input(reactor.action, [
                     next(100, .clicksDone),
                     ])
                 
-                let okAction: (UIAlertAction) -> Void = { [weak reactor] _ in
-                    reactor?.action.onNext(.saveTasks)
-                }
                 let expectAlert = UIAlertComponent(
                     title: L10n.uiAlertNoticeTitle,
                     message: L10n.uiAlertEmptyContents,
                     actions: [
-                        UIAlertActionComponent(title: L10n.uiAlertCancelTitle, style: .cancel),
-                        UIAlertActionComponent(title: L10n.uiAlertOkTitle, action: okAction)
+                        UIAlertActionComponent(title: L10n.uiAlertOkTitle)
                     ]
                 )
                 rxRxpect.assert(reactor.state.map { $0.alertView }) { events in
@@ -76,11 +67,6 @@ class TaskEditReactorSpec: QuickSpec {
                         next(0, nil),
                         next(100, Optional(expectAlert))
                         ])
-                }
-                // when clicks an ok button
-                okAction(UIAlertAction())
-                rxRxpect.assert(reactor.state.map { $0.doneTask }) { events in
-                    XCTAssertEqual(events[0], next(0, Task()))
                 }
             }
         }

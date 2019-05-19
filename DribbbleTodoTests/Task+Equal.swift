@@ -16,3 +16,10 @@ extension Task {
         return self.title == object.title && self.isDone == object.isDone
     }
 }
+
+
+extension EditingTask: Equatable {
+    public static func ==(lhs: EditingTask, rhs: EditingTask) -> Bool {
+        return lhs.title == rhs.title
+    }
+}

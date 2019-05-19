@@ -14,12 +14,16 @@ import UIKit
 
 class TaskListViewController: UIViewController {
 
+    struct Metric {
+        static let sectionInset = UIEdgeInsets(top: 20, left: 15, bottom: 20, right: 15)
+    }
+
     let taskCollectionView: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
         collectionView.register(TaskViewCell.self, forCellWithReuseIdentifier: TaskViewCell.swiftIdentifier)
-        collectionView.contentInset = UIEdgeInsets(top: 0, left: 10, bottom: 10, right: 0)
+        collectionView.contentInset = Metric.sectionInset
         collectionView.backgroundColor = .clear
         return collectionView
     }()
@@ -45,22 +49,29 @@ class TaskListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
         navigationItem.title = "Tasks"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: Asset.icAdd.image, style: .plain, target: self, action: #selector(showEditViewController))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: Asset.icAdd.image, style: .plain, target: self, action: #selector(clicksEdit))
         taskCollectionView.do {
             view.addSubview($0)
+            $0.backgroundColor = .white
             $0.snp.makeConstraints {
-                $0.edges.equalToSuperview()
+                $0.leading.equalTo(safeAreaLeading)
+                $0.trailing.equalTo(safeAreaTrailing)
+                $0.top.equalTo(safeAreaTop)
+                $0.bottom.equalTo(safeAreaBottom)
             }
         }
     }
-    
     @objc
-    func showEditViewController() {
-        let reactor = taskEditContainer.resolve(TaskEditReactor.self)!
-        let schedulers = taskEditContainer.resolve(RxDispatcherSchedulers.self)!
-        self.show(TaskEditViewController(reactor: reactor, schedulers: schedulers, taskCompletion: { task in
-            
+    func clicksEdit() {
+        let editing = EditingTask(title: "")
+        let editReactor = taskEditContainer.resolve(TaskEditReactor.self, argument: editing)!
+        let scheduler = taskEditContainer.resolve(RxDispatcherSchedulersType.self)!
+        self.show(TaskEditViewController(reactor: editReactor, scheduler: scheduler, taskCompletion: { [weak reactor] editing in
+            logger.info("return edtingTask: \(editing)")
+            reactor?.action.onNext(.updateEditingTask(editing))
+
         }), sender: nil)
     }
 }
@@ -69,12 +80,30 @@ extension TaskListViewController: View, HasDisposeBag {
     func bind(reactor: TaskListReactor) {
         self.taskCollectionView.rx.setDelegate(self).disposed(by: disposeBag)
 
+        self.taskCollectionView.rx.itemSelected
+            .map { Reactor.Action.itemSelected($0) }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+
         self.rx.viewDidLoad
             .map { Reactor.Action.fetchTasks }
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
 
-        reactor.state.map { $0.items }
+        reactor.state.map { $0.selectedEditingTask }
+            .filterNil()
+            .bind { [weak self] editing in
+                let editReactor = taskEditContainer.resolve(TaskEditReactor.self, argument: editing)!
+                let scheduler = taskEditContainer.resolve(RxDispatcherSchedulersType.self)!
+                let vc = TaskEditViewController(reactor: editReactor, scheduler: scheduler, taskCompletion: { [weak reactor] editing in
+                    logger.info("return edtingTask: \(editing)")
+                    reactor?.action.onNext(.updateEditingTask(editing))
+                })
+                self?.show(vc, sender: self)
+            }
+            .disposed(by: disposeBag)
+
+        reactor.state.map { $0.sections }
             .filterEmpty()
             .distinctUntilChanged()
             .bind(to: taskCollectionView.rx.items(dataSource: self.dataSource))
@@ -83,9 +112,29 @@ extension TaskListViewController: View, HasDisposeBag {
 }
 
 extension TaskListViewController: UICollectionViewDelegateFlowLayout {
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let referenceHeight: CGFloat = TaskViewCell.Metric.height
-        let referenceWidth: CGFloat = view.frame.width
+        var referenceWidth: CGFloat = collectionView.frame.width
+
+        guard let layout = collectionViewLayout as? UICollectionViewFlowLayout else {
+            return CGSize(width: referenceWidth, height: referenceHeight)
+        }
+        let sectionInset = layout.sectionInset
+
+        if #available(iOS 11.0, *) {
+            referenceWidth = collectionView.safeAreaLayoutGuide.layoutFrame.width
+                - sectionInset.left
+                - sectionInset.right
+                - collectionView.contentInset.left
+                - collectionView.contentInset.right
+        } else {
+            referenceWidth = collectionView.frame.width
+                - sectionInset.left
+                - sectionInset.right
+                - collectionView.contentInset.left
+                - collectionView.contentInset.right
+        }
         return CGSize(width: referenceWidth, height: referenceHeight)
     }
 }

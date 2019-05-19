@@ -17,18 +17,24 @@ class TaskViewCell: UICollectionViewCell, SwiftNameIdentifier {
     }
 
     let titleView = UILabel()
-
+    let roundShadowView = RoundShadowView()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        titleView.do {
+        roundShadowView.do {
+            $0.backgroundColor = ColorName.bgTaskCell
+            $0.cornerRadius = 5.0
             contentView.addSubview($0)
+            $0.snp.makeConstraints {
+                $0.edges.equalToSuperview()
+            }
+        }
+        titleView.do {
+            roundShadowView.addSubview($0)
             $0.numberOfLines = 0
             $0.lineBreakMode = .byWordWrapping
             $0.snp.makeConstraints {
-                $0.top.equalToSuperview()
-                $0.leading.equalToSuperview()
-                $0.trailing.equalToSuperview()
-                $0.bottom.equalToSuperview()
+                $0.edges.equalToSuperview().inset(10)
             }
         }
     }
@@ -38,7 +44,7 @@ class TaskViewCell: UICollectionViewCell, SwiftNameIdentifier {
     }
 
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
-        titleView.preferredMaxLayoutWidth = layoutAttributes.size.width - contentView.layoutMargins.left - contentView.layoutMargins.left
+        titleView.preferredMaxLayoutWidth = layoutAttributes.size.width - contentView.layoutMargins.left - contentView.layoutMargins.right
         layoutAttributes.bounds.size.height = systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
         return layoutAttributes
     }

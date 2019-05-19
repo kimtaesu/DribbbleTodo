@@ -13,7 +13,9 @@ import RxSwift
 protocol TaskServiceType {
     var realm: Realm { get }
     
-    func fetchTasks() -> Observable<[Task]>
+    func getTasks() -> Observable<[Task]>
     @discardableResult
-    func addTask(_ tasks: Task) -> Observable<Result<Task, Error>>
+    func updateIfEmptyAdd(task: Task) -> Observable<Result<Task, Error>>
+    func updateIfEmptyAdd(editing: EditingTask) -> Observable<Result<Task, Error>>
+    func getTaskById(_ id: String) -> Task?
 }

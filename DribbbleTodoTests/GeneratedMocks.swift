@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: DribbbleTodo/Service/TaskServiceType.swift at 2019-05-19 00:07:42 +0000
+// MARK: - Mocks generated from file: DribbbleTodo/Service/TaskServiceType.swift at 2019-05-19 14:15:16 +0000
 
 //
 //  TaskServiceType.swift
@@ -51,31 +51,61 @@ import RxSwift
     
     
     
-     func fetchTasks()  -> Observable<[Task]> {
+     func getTasks()  -> Observable<[Task]> {
         
-            return cuckoo_manager.call("fetchTasks() -> Observable<[Task]>",
+            return cuckoo_manager.call("getTasks() -> Observable<[Task]>",
                 parameters: (),
                 escapingParameters: (),
                 superclassCall:
                     
                     Cuckoo.MockManager.crashOnProtocolSuperclassCall()
                     ,
-                defaultCall: __defaultImplStub!.fetchTasks())
+                defaultCall: __defaultImplStub!.getTasks())
         
     }
     
     
     
-     func addTask(_ tasks: Task)  -> Observable<Result<Task, Error>> {
+     func updateIfEmptyAdd(task: Task)  -> Observable<Result<Task, Error>> {
         
-            return cuckoo_manager.call("addTask(_: Task) -> Observable<Result<Task, Error>>",
-                parameters: (tasks),
-                escapingParameters: (tasks),
+            return cuckoo_manager.call("updateIfEmptyAdd(task: Task) -> Observable<Result<Task, Error>>",
+                parameters: (task),
+                escapingParameters: (task),
                 superclassCall:
                     
                     Cuckoo.MockManager.crashOnProtocolSuperclassCall()
                     ,
-                defaultCall: __defaultImplStub!.addTask(tasks))
+                defaultCall: __defaultImplStub!.updateIfEmptyAdd(task: task))
+        
+    }
+    
+    
+    
+     func updateIfEmptyAdd(editing: EditingTask)  -> Observable<Result<Task, Error>> {
+        
+            return cuckoo_manager.call("updateIfEmptyAdd(editing: EditingTask) -> Observable<Result<Task, Error>>",
+                parameters: (editing),
+                escapingParameters: (editing),
+                superclassCall:
+                    
+                    Cuckoo.MockManager.crashOnProtocolSuperclassCall()
+                    ,
+                defaultCall: __defaultImplStub!.updateIfEmptyAdd(editing: editing))
+        
+    }
+    
+    
+    
+     func getTaskById(_ id: String)  -> Task? {
+        
+            return cuckoo_manager.call("getTaskById(_: String) -> Task?",
+                parameters: (id),
+                escapingParameters: (id),
+                superclassCall:
+                    
+                    Cuckoo.MockManager.crashOnProtocolSuperclassCall()
+                    ,
+                defaultCall: __defaultImplStub!.getTaskById(id))
         
     }
     
@@ -92,14 +122,24 @@ import RxSwift
 	    }
 	    
 	    
-	    func fetchTasks() -> Cuckoo.ProtocolStubFunction<(), Observable<[Task]>> {
+	    func getTasks() -> Cuckoo.ProtocolStubFunction<(), Observable<[Task]>> {
 	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
-	        return .init(stub: cuckoo_manager.createStub(for: MockTaskServiceType.self, method: "fetchTasks() -> Observable<[Task]>", parameterMatchers: matchers))
+	        return .init(stub: cuckoo_manager.createStub(for: MockTaskServiceType.self, method: "getTasks() -> Observable<[Task]>", parameterMatchers: matchers))
 	    }
 	    
-	    func addTask<M1: Cuckoo.Matchable>(_ tasks: M1) -> Cuckoo.ProtocolStubFunction<(Task), Observable<Result<Task, Error>>> where M1.MatchedType == Task {
-	        let matchers: [Cuckoo.ParameterMatcher<(Task)>] = [wrap(matchable: tasks) { $0 }]
-	        return .init(stub: cuckoo_manager.createStub(for: MockTaskServiceType.self, method: "addTask(_: Task) -> Observable<Result<Task, Error>>", parameterMatchers: matchers))
+	    func updateIfEmptyAdd<M1: Cuckoo.Matchable>(task: M1) -> Cuckoo.ProtocolStubFunction<(Task), Observable<Result<Task, Error>>> where M1.MatchedType == Task {
+	        let matchers: [Cuckoo.ParameterMatcher<(Task)>] = [wrap(matchable: task) { $0 }]
+	        return .init(stub: cuckoo_manager.createStub(for: MockTaskServiceType.self, method: "updateIfEmptyAdd(task: Task) -> Observable<Result<Task, Error>>", parameterMatchers: matchers))
+	    }
+	    
+	    func updateIfEmptyAdd<M1: Cuckoo.Matchable>(editing: M1) -> Cuckoo.ProtocolStubFunction<(EditingTask), Observable<Result<Task, Error>>> where M1.MatchedType == EditingTask {
+	        let matchers: [Cuckoo.ParameterMatcher<(EditingTask)>] = [wrap(matchable: editing) { $0 }]
+	        return .init(stub: cuckoo_manager.createStub(for: MockTaskServiceType.self, method: "updateIfEmptyAdd(editing: EditingTask) -> Observable<Result<Task, Error>>", parameterMatchers: matchers))
+	    }
+	    
+	    func getTaskById<M1: Cuckoo.Matchable>(_ id: M1) -> Cuckoo.ProtocolStubFunction<(String), Optional<Task>> where M1.MatchedType == String {
+	        let matchers: [Cuckoo.ParameterMatcher<(String)>] = [wrap(matchable: id) { $0 }]
+	        return .init(stub: cuckoo_manager.createStub(for: MockTaskServiceType.self, method: "getTaskById(_: String) -> Task?", parameterMatchers: matchers))
 	    }
 	    
 	}
@@ -123,15 +163,27 @@ import RxSwift
 	
 	    
 	    @discardableResult
-	    func fetchTasks() -> Cuckoo.__DoNotUse<Observable<[Task]>> {
+	    func getTasks() -> Cuckoo.__DoNotUse<Observable<[Task]>> {
 	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
-	        return cuckoo_manager.verify("fetchTasks() -> Observable<[Task]>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+	        return cuckoo_manager.verify("getTasks() -> Observable<[Task]>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
 	    }
 	    
 	    @discardableResult
-	    func addTask<M1: Cuckoo.Matchable>(_ tasks: M1) -> Cuckoo.__DoNotUse<Observable<Result<Task, Error>>> where M1.MatchedType == Task {
-	        let matchers: [Cuckoo.ParameterMatcher<(Task)>] = [wrap(matchable: tasks) { $0 }]
-	        return cuckoo_manager.verify("addTask(_: Task) -> Observable<Result<Task, Error>>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+	    func updateIfEmptyAdd<M1: Cuckoo.Matchable>(task: M1) -> Cuckoo.__DoNotUse<Observable<Result<Task, Error>>> where M1.MatchedType == Task {
+	        let matchers: [Cuckoo.ParameterMatcher<(Task)>] = [wrap(matchable: task) { $0 }]
+	        return cuckoo_manager.verify("updateIfEmptyAdd(task: Task) -> Observable<Result<Task, Error>>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+	    }
+	    
+	    @discardableResult
+	    func updateIfEmptyAdd<M1: Cuckoo.Matchable>(editing: M1) -> Cuckoo.__DoNotUse<Observable<Result<Task, Error>>> where M1.MatchedType == EditingTask {
+	        let matchers: [Cuckoo.ParameterMatcher<(EditingTask)>] = [wrap(matchable: editing) { $0 }]
+	        return cuckoo_manager.verify("updateIfEmptyAdd(editing: EditingTask) -> Observable<Result<Task, Error>>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+	    }
+	    
+	    @discardableResult
+	    func getTaskById<M1: Cuckoo.Matchable>(_ id: M1) -> Cuckoo.__DoNotUse<Optional<Task>> where M1.MatchedType == String {
+	        let matchers: [Cuckoo.ParameterMatcher<(String)>] = [wrap(matchable: id) { $0 }]
+	        return cuckoo_manager.verify("getTaskById(_: String) -> Task?", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
 	    }
 	    
 	}
@@ -151,18 +203,26 @@ import RxSwift
     
 
     
-     func fetchTasks()  -> Observable<[Task]> {
+     func getTasks()  -> Observable<[Task]> {
         return DefaultValueRegistry.defaultValue(for: Observable<[Task]>.self)
     }
     
-     func addTask(_ tasks: Task)  -> Observable<Result<Task, Error>> {
+     func updateIfEmptyAdd(task: Task)  -> Observable<Result<Task, Error>> {
         return DefaultValueRegistry.defaultValue(for: Observable<Result<Task, Error>>.self)
+    }
+    
+     func updateIfEmptyAdd(editing: EditingTask)  -> Observable<Result<Task, Error>> {
+        return DefaultValueRegistry.defaultValue(for: Observable<Result<Task, Error>>.self)
+    }
+    
+     func getTaskById(_ id: String)  -> Task? {
+        return DefaultValueRegistry.defaultValue(for: Optional<Task>.self)
     }
     
 }
 
 
-// MARK: - Mocks generated from file: DribbbleTodo/Service/UserServiceType.swift at 2019-05-19 00:07:42 +0000
+// MARK: - Mocks generated from file: DribbbleTodo/Service/UserServiceType.swift at 2019-05-19 14:15:16 +0000
 
 //
 //  UserService.swift

@@ -35,7 +35,11 @@ final class CompositionRoot {
         window.makeKeyAndVisible()
 
         let taskListReactor = taskListContainer.resolve(TaskListReactor.self)!
-        let presentMainScreen = { window.rootViewController = UINavigationController(rootViewController: TaskListViewController(reactor: taskListReactor)) }
+        let presentMainScreen = { window.rootViewController = UINavigationController(rootViewController: TaskListViewController(reactor: taskListReactor)).then {
+                $0.hero.isEnabled = true
+                $0.hero.navigationAnimationType = .fade
+            }
+        }
 //        let presentMainScreen = { window.rootViewController = TaskEditViewController() }
 
         let userService = UserService()

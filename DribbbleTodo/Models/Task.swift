@@ -18,4 +18,8 @@ class Task: Object, Encodable {
     override static func primaryKey() -> String? {
         return "id"
     }
+    
+    static func sortKey() -> String {
+        return "createdAt"
+    }
 }

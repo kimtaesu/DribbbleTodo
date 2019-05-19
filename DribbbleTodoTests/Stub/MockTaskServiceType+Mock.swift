@@ -23,7 +23,7 @@ extension MockTaskServiceType {
     
     func mockSample(mock: MockTaskServiceType? = nil) -> MockTaskServiceType {
         stub(self) { mock in
-            when(mock.fetchTasks()).then {
+            when(mock.getTasks()).then {
                 return Observable.just(MockTaskServiceType.sampleTasks)
             }
         }
@@ -32,7 +32,10 @@ extension MockTaskServiceType {
     
     func mockAddTasks() -> MockTaskServiceType {
         stub(self, block: { mock in
-            mock.addTask(any()).then({ task in
+            mock.updateIfEmptyAdd(editing: any()).then({ task in
+                Observable.just(Result.success(task.task))
+            })
+            mock.updateIfEmptyAdd(task: any()).then({ task in
                 Observable.just(Result.success(task))
             })
         })

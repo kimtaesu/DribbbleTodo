@@ -12,9 +12,6 @@ import Swinject
 
 let taskEditContainer: Container = {
    let container = Container(parent: rootContainer)
-    // swiftlint:disable force_try
-    let realm = try! Realm()
-    let taskService = rootContainer.resolve(TaskServiceType.self, argument: realm)!
-    container.register(TaskEditReactor.self, factory: { _ in TaskEditReactor(taskService) }).inObjectScope(.transient)
+    container.register(TaskEditReactor.self, factory: { _, editingTask in TaskEditReactor(edit: editingTask) }).inObjectScope(.transient)
     return container
 }()

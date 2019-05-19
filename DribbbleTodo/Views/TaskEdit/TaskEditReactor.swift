@@ -11,75 +11,65 @@ import ReactorKit
 import RxSwift
 
 class TaskEditReactor: Reactor {
-    let initialState: State = State(title: "")
+    
+    let initialState: State
 
-    let taskService: TaskServiceType
-
-    init(_ taskService: TaskServiceType) {
-        self.taskService = taskService
+    init(edit: EditingTask) {
+        logger.info("Init editing task: \(edit)")
+        self.initialState = State(editingTask: edit)
     }
 
     enum Action {
         case setTitle(String?)
         case clicksDone
-        case saveTasks
     }
     struct State {
-        var title: String
+        var editingTask: EditingTask
+
+        public init(editingTask: EditingTask) {
+            self.editingTask = editingTask
+        }
 
         var alertView: UIAlertComponent?
-        var doneTask: Task?
+        var savedEditingTask: EditingTask?
+        var isDelete: Bool?
         
-        public init(title: String) {
-            self.title = title
+        mutating func disposableState() {
+            self.savedEditingTask = nil
+            self.alertView = nil
         }
     }
     enum Mutation {
-        case setTitle(String?)
-        case setDone(Task)
+        case setTitle(String)
+        case setSaveDone(EditingTask)
         case setError(Error)
-        case setShowEmptyContents
+        case setShowEmptyAlert
     }
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
         case .setTitle(let title):
-            return .just(.setTitle(title))
-        case .saveTasks:
-            let task = Task().then {
-                $0.title = currentState.title
-            }
-            return self.taskService.addTask(task).map { result in
-                do {
-                    return Mutation.setDone(try result.get())
-                } catch let e {
-                    return Mutation.setError(e)
-                }
-            }
+            return .just(.setTitle(title ?? ""))
         case .clicksDone:
-            if currentState.title.isEmpty {
-                return .just(.setShowEmptyContents)
+            if currentState.editingTask.title.isEmpty {
+                return .just(.setShowEmptyAlert)
             } else {
-                return mutate(action: .saveTasks)
+                return .just(Mutation.setSaveDone(currentState.editingTask))
             }
         }
     }
     func reduce(state: State, mutation: Mutation) -> State {
         var newState = state
-        newState.alertView = nil
-        newState.doneTask = nil
-
+        newState.disposableState()
+        
         switch mutation {
         case .setTitle(let title):
-            newState.title = title ?? ""
-        case .setShowEmptyContents:
+            newState.editingTask.title = title
+        case .setShowEmptyAlert:
             newState.alertView = UIAlertComponent(
                 title: L10n.uiAlertNoticeTitle,
                 message: L10n.uiAlertEmptyContents,
                 actions: [
-                    UIAlertActionComponent(title: L10n.uiAlertCancelTitle, style: .cancel),
-                    UIAlertActionComponent(title: L10n.uiAlertOkTitle, action: { [weak self] _ in
-                        self?.action.onNext(.saveTasks)
-                    })
+                    UIAlertActionComponent(title: L10n.uiAlertOkTitle)
                 ]
             )
         case .setError(let error):
@@ -87,8 +77,8 @@ class TaskEditReactor: Reactor {
                 title: L10n.uiAlertWarningTitle,
                 message: L10n.errorCreateTask(error.localizedDescription)
             )
-        case let .setDone(task):
-            newState.doneTask = task
+        case let .setSaveDone(task):
+            newState.savedEditingTask = task
         }
         return newState
     }

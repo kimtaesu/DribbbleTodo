@@ -11,9 +11,13 @@ import RxDataSources
 
 struct TaskViewModel: Equatable {
     let id: String
-    let title: String
+    var title: String
     let isDone: Bool
     let createdAt: Date
+    
+    static func empty() -> TaskViewModel {
+        return TaskViewModel(id: UUID().uuidString, title: "", isDone: false, createdAt: Date())
+    }
 }
 
 extension TaskViewModel: IdentifiableType {
@@ -30,5 +34,11 @@ extension Task {
             isDone: self.isDone,
             createdAt: self.createdAt
         )
+    }
+}
+
+extension TaskViewModel {
+    var editingTask: EditingTask {
+        return EditingTask(title: self.title, id: self.id, createdAt: self.createdAt)
     }
 }

@@ -71,10 +71,15 @@
 		BD784109227B03C0001E5DEE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD784108227B03C0001E5DEE /* main.swift */; };
 		BD78410B227B04CB001E5DEE /* StubAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD78410A227B04CB001E5DEE /* StubAppDelegate.swift */; };
 		BD78410D227B04F2001E5DEE /* TestConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD78410C227B04F2001E5DEE /* TestConfiguration.swift */; };
+		BDD1D4A22290F88800FFCC47 /* RxRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD1D4A12290F88800FFCC47 /* RxRealm.swift */; };
+		BDD1D4A42290F8AA00FFCC47 /* RealmObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD1D4A32290F8AA00FFCC47 /* RealmObserver.swift */; };
+		BDD1D4A6229101D900FFCC47 /* Task+ThreadSafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD1D4A5229101D900FFCC47 /* Task+ThreadSafe.swift */; };
 		BDE1BDA4227D3C5900BE2419 /* LoginReactorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE1BDA3227D3C5900BE2419 /* LoginReactorSpec.swift */; };
 		BDE1BDAB227D48DA00BE2419 /* LoginViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE1BDAA227D48DA00BE2419 /* LoginViewControllerSpec.swift */; };
 		BDE1BDBA227D509400BE2419 /* GoogleService-Info-Test.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDE1BDB8227D509300BE2419 /* GoogleService-Info-Test.plist */; };
 		BDE1BDBB227D509400BE2419 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDE1BDB9227D509300BE2419 /* GoogleService-Info.plist */; };
+		BDE7D21322917B2C009E75D7 /* ThreadInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE7D21222917B2C009E75D7 /* ThreadInfo.swift */; };
+		BDE7D21522918970009E75D7 /* EditingTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE7D21422918970009E75D7 /* EditingTask.swift */; };
 		BDE9CC11227B295800191DB9 /* TaskListReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE9CC10227B295800191DB9 /* TaskListReactor.swift */; };
 		BDE9CC13227B29C300191DB9 /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE9CC12227B29C300191DB9 /* UIViewController+Rx.swift */; };
 		BDE9CC16227B2B6800191DB9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE9CC15227B2B6800191DB9 /* LoginViewController.swift */; };
@@ -185,10 +190,15 @@
 		BD78410A227B04CB001E5DEE /* StubAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubAppDelegate.swift; sourceTree = "<group>"; };
 		BD78410C227B04F2001E5DEE /* TestConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConfiguration.swift; sourceTree = "<group>"; };
 		BDA777E62283201500067F48 /* TylerCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TylerCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDD1D4A12290F88800FFCC47 /* RxRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxRealm.swift; sourceTree = "<group>"; };
+		BDD1D4A32290F8AA00FFCC47 /* RealmObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmObserver.swift; sourceTree = "<group>"; };
+		BDD1D4A5229101D900FFCC47 /* Task+ThreadSafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+ThreadSafe.swift"; sourceTree = "<group>"; };
 		BDE1BDA3227D3C5900BE2419 /* LoginReactorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginReactorSpec.swift; sourceTree = "<group>"; };
 		BDE1BDAA227D48DA00BE2419 /* LoginViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerSpec.swift; sourceTree = "<group>"; };
 		BDE1BDB8227D509300BE2419 /* GoogleService-Info-Test.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Test.plist"; sourceTree = "<group>"; };
 		BDE1BDB9227D509300BE2419 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BDE7D21222917B2C009E75D7 /* ThreadInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadInfo.swift; sourceTree = "<group>"; };
+		BDE7D21422918970009E75D7 /* EditingTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingTask.swift; sourceTree = "<group>"; };
 		BDE9CC10227B295800191DB9 /* TaskListReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListReactor.swift; sourceTree = "<group>"; };
 		BDE9CC12227B29C300191DB9 /* UIViewController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
 		BDE9CC15227B2B6800191DB9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -281,6 +291,7 @@
 				BD311155227D820600FB8217 /* TaskEditViewController.swift */,
 				BD311157227D820F00FB8217 /* TaskEditReactor.swift */,
 				BD3111AB227E767300FB8217 /* TaskEditContainer.swift */,
+				BDE7D21422918970009E75D7 /* EditingTask.swift */,
 			);
 			path = TaskEdit;
 			sourceTree = "<group>";
@@ -350,6 +361,7 @@
 		BD3C9A9B22792CF600E51A34 /* DribbbleTodo */ = {
 			isa = PBXGroup;
 			children = (
+				BDD1D4A02290F87900FFCC47 /* RxRealm */,
 				BD311144227D651200FB8217 /* Models */,
 				BDE1BDA7227D456D00BE2419 /* Rx */,
 				BD90079A227BF55400DC7F91 /* SupportingFiles */,
@@ -367,6 +379,7 @@
 				BD784108227B03C0001E5DEE /* main.swift */,
 				BD31117B227DCD3200FB8217 /* SwiftNameIdentifier.swift */,
 				BD3111AD227E76B700FB8217 /* RootContainer.swift */,
+				BDE7D21222917B2C009E75D7 /* ThreadInfo.swift */,
 			);
 			path = DribbbleTodo;
 			sourceTree = "<group>";
@@ -469,6 +482,7 @@
 				BD311177227DCB3F00FB8217 /* TaskViewModel.swift */,
 				BD311179227DCCF600FB8217 /* TaskViewCell.swift */,
 				BDFC928522825D5700D0370C /* TaskListContainer.swift */,
+				BDD1D4A5229101D900FFCC47 /* Task+ThreadSafe.swift */,
 			);
 			path = TaskList;
 			sourceTree = "<group>";
@@ -480,6 +494,15 @@
 				BD3C9AAB22792CF700E51A34 /* Info.plist */,
 			);
 			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		BDD1D4A02290F87900FFCC47 /* RxRealm */ = {
+			isa = PBXGroup;
+			children = (
+				BDD1D4A12290F88800FFCC47 /* RxRealm.swift */,
+				BDD1D4A32290F8AA00FFCC47 /* RealmObserver.swift */,
+			);
+			path = RxRealm;
 			sourceTree = "<group>";
 		};
 		BDE1BDA2227D3C5100BE2419 /* Login */ = {
@@ -1023,6 +1046,7 @@
 				BD3111B5227E79F000FB8217 /* UIView+Blur.swift in Sources */,
 				BD311189227DD74A00FB8217 /* TaskServiceType.swift in Sources */,
 				BD7840FF227B0220001E5DEE /* SplashReactor.swift in Sources */,
+				BDE7D21322917B2C009E75D7 /* ThreadInfo.swift in Sources */,
 				BD3C9A9F22792CF600E51A34 /* ViewController.swift in Sources */,
 				BD3111B9227E7A0A00FB8217 /* UIView+Gradients.swift in Sources */,
 				BDE9CC13227B29C300191DB9 /* UIViewController+Rx.swift in Sources */,
@@ -1032,16 +1056,20 @@
 				BD311158227D820F00FB8217 /* TaskEditReactor.swift in Sources */,
 				BD3111AC227E767300FB8217 /* TaskEditContainer.swift in Sources */,
 				BDE9CC1D227B2C9400191DB9 /* UserServiceType.swift in Sources */,
+				BDD1D4A22290F88800FFCC47 /* RxRealm.swift in Sources */,
 				BD3C9AE122792DD200E51A34 /* Assets.swift in Sources */,
 				BD311153227D7B4A00FB8217 /* UIViewController+UIAlertViewController.swift in Sources */,
 				BD311178227DCB3F00FB8217 /* TaskViewModel.swift in Sources */,
 				BD311148227D669F00FB8217 /* User+Map.swift in Sources */,
+				BDE7D21522918970009E75D7 /* EditingTask.swift in Sources */,
 				BD7840F4227B01A4001E5DEE /* CompositionRoot.swift in Sources */,
 				BDE9CC1F227B2CF200191DB9 /* UserService.swift in Sources */,
+				BDD1D4A42290F8AA00FFCC47 /* RealmObserver.swift in Sources */,
 				BD3C9A9D22792CF600E51A34 /* AppDelegate.swift in Sources */,
 				BD311172227DC10B00FB8217 /* Encodable+Dictionary.swift in Sources */,
 				BD311146227D652200FB8217 /* Me.swift in Sources */,
 				BD31118B227DD7B600FB8217 /* TaskService.swift in Sources */,
+				BDD1D4A6229101D900FFCC47 /* Task+ThreadSafe.swift in Sources */,
 				BD7840FD227B01F5001E5DEE /* SplashViewController.swift in Sources */,
 				BD311170227DBE4E00FB8217 /* Task.swift in Sources */,
 				BDFC92842281D36700D0370C /* RxDispatcherSchedulers.swift in Sources */,

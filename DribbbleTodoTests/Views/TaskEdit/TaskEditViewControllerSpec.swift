@@ -16,43 +16,28 @@ class TaskEditViewControllerSpec: QuickSpec {
     override func spec() {
         var viewController: TaskEditViewController!
         var reactor: TaskEditReactor!
-        var taskService: MockTaskServiceType!
         var testDispatcherSchedulers: RxTestDispatcherSchedulers!
         
         beforeEach {
             testDispatcherSchedulers = RxTestDispatcherSchedulers()
-            taskService = MockTaskServiceType().mockSample().mockAddTasks()
-            reactor = TaskEditReactor(taskService)
-            viewController = TaskEditViewController(reactor: reactor, schedulers: testDispatcherSchedulers, taskCompletion: nil)
+            reactor = TaskEditReactor(edit: EditingTask())
+            viewController = TaskEditViewController(reactor: reactor, scheduler: testDispatcherSchedulers, taskCompletion: nil)
         }
         
         describe("A TaskEditViewController") {
-            context("viewDidLoad") {
+            context("when saves a task") {
                 beforeEach {
-                    _ = viewController.view
+                    reactor.stub.isEnabled = true
                 }
-                it("binding a titleTextField") {
-                    viewController.titleTextField.text = "test"
-                    viewController.titleTextField.sendActions(for: .allEditingEvents)
-                    (testDispatcherSchedulers.main as! TestScheduler).advanceTo(500)
-                    expect(reactor.currentState.title) == "test"
-                }
-                context("when saves a task") {
-                    beforeEach {
-                        reactor.stub.isEnabled = true
+                it("return taskCompletion saved a task") {
+                    var actualTask: EditingTask? = nil
+                    let expectTask = EditingTask(title: "title")
+                    reactor.stub.state.value.editingTask = expectTask
+                    viewController.taskCompletion = {
+                        actualTask = $0
                     }
-                    it("return taskCompletion saved a task") {
-                        var actualTask: Task? = nil
-                        let expectTask = Task().then {
-                            $0.title = "title"
-                        }
-                        reactor.stub.state.value.title = expectTask.title
-                        viewController.taskCompletion = {
-                            actualTask = $0
-                        }
-                        viewController.doneButton.doAction()
-                        expect(actualTask) == expectTask
-                    }
+                    viewController.doneButton.doAction()
+                    expect(actualTask) == expectTask
                 }
             }
         }
